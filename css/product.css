@@ -1,0 +1,266 @@
+@import url('basic_settings.css');
+
+/* product */
+nav ul:first-of-type li:nth-child(4) a{
+    color: #6D6D6D;
+    text-shadow: 3px 3px 2px #BDE0CE;
+}
+
+nav ul:first-of-type li:nth-child(4) ol a{
+    color: #000;
+    text-shadow: none;
+}
+
+/* ---------------------商品頁--------------------- */
+/* --上方-- */
+.product_main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product_banner{
+    width: 100%;
+    margin-bottom: 60px;
+
+    position: relative;
+}
+
+.product_banner img{
+    width: 440px;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin: auto 60px auto 100px;
+}
+
+.product_banner h1{
+    font-size: 50px;
+    position: absolute;
+    width: auto;
+    letter-spacing: 2px;
+}
+
+.product_banner h1:nth-of-type(1){
+    left: 48%;
+    top: 25%;
+}
+
+.product_banner h1:nth-of-type(2){
+    left: 50%;
+    top: 50%;
+}
+
+/* --左側導覽-- */
+.product_nav{
+    width: 15%;
+    height: 400px;
+    display: inline-block;
+    border: #BDE0CE 8px solid;
+    border-radius: 10px;
+
+    position: relative;
+}
+
+.product_nav ul{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 44px;
+    padding: 10px 0 0 25px;
+}
+
+.product_nav ul li{
+    font-weight: normal;
+    text-indent: 1em;
+}
+
+.product_nav ul li:nth-of-type(n):hover div{
+    display: block;
+}
+
+.product_nav div{
+    display: none;
+    background-color:#BDE0CE;
+    width: 50px;
+    height: 8px;
+
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 20px;
+    z-index: -1;
+}
+
+/* --商品照列-- */
+.product_list{
+    width: 78%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.product_list li{
+    margin: 0 17px 60px 17px;
+
+    position: relative;
+}
+
+.product_list li img{
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* 可以hover圖片再跑button出來就好嗎 */
+.product_list li:hover button{
+    display: block;
+}
+
+.product_list li button{
+    display: none;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #F4E2A6;
+    border: none;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.product_list li button:first-of-type{
+    width: 50px;
+    left: 72px;
+    background-image: url("../img/product_icon_cart.png");
+    background-position: 12px 11px;
+    background-repeat: no-repeat;
+}
+
+.product_list li button:last-of-type{
+    width: 70px;
+    right: 72px;
+}
+
+/* ---------------------商品頁1--------------------- */
+.product1_main{
+    margin-top: 60px;
+}
+
+.product1_main > p{
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+.product1_main h1{
+    width: auto;
+}
+
+.product1_main > p a{
+    text-decoration: underline;
+}
+
+.product1_top_imgs{
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product1_top .product1_top_imgs img{
+    width: 160px;
+}
+
+.product1_top{
+    display: flex;
+}
+
+.product1_top img{
+    width: 510px;
+    margin-left: 10px;
+}
+
+.product1_top_word{
+    flex-grow: 1;
+    margin-left: 50px;
+}
+
+.product1_top_word h1{
+    line-height: 44px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.product1_top_word h1:first-of-type{
+    margin-top: 90px;
+}
+
+.product1_top_word span{
+    background-image: url("../img/identify_icon.png");
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-size: cover;
+    margin: 5px 5px 0 0;
+}
+/* 對齊 不能 */
+.product1_top_word p{
+    display: inline-block;
+    line-height: 15px;
+}
+
+.product1_top_word_num{
+    margin: 200px 0 30px 0;
+}
+
+
+.product1_top_word button{
+    margin-right: 5px;
+}
+
+/* --下方文字-- */
+.product1_top ~ h1{
+    text-align: left;
+    margin: 60px 0 30px 40px;
+}
+
+.product1_top ~ p{
+    line-height: 22px;
+}
+
+/* --推薦商品-- */
+.product1_recommend{
+    margin-left: 40px;
+    width: 90%;
+    margin: 0 auto 60px;
+}
+
+.product1_recommend li{
+    flex-grow: 1;
+}
+
+.product1_recommend li img{
+    width: 220px;
+    height: 220px;
+}
+
+.product1_recommend li button{
+    height: 40px;
+    font-size: 18px;
+}
+
+.product1_recommend li button:first-of-type{
+    width: 40px;
+    background-position: 8px 8px;
+    left: 60px;
+    top: -30px;
+}
+
+.product1_recommend li button:last-of-type{
+    width: 60px;
+    right: 60px;
+    top: -30px;
+}

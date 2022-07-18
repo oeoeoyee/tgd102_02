@@ -1,0 +1,271 @@
+@import url('basic_settings.css');
+
+/* order */
+nav ul:first-of-type li:nth-child(5) a{
+    color: #6D6D6D;
+    text-shadow: 3px 3px 2px #BDE0CE;
+}
+
+/* ---------------------訂做商品頁--------------------- */
+/* --上方-- */
+.order_main h1{
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.order_banner{
+    width: 100%;
+    height: 440px;
+    margin-bottom: 60px;
+
+    position: relative;
+}
+
+.order_banner img{
+    float: right;
+    width: 440px;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin: auto 100px auto 60px;
+    transform: rotate(-20deg);
+}
+
+.order_banner h1{
+    font-size: 50px;
+    position: absolute;
+    width: auto;
+    letter-spacing: 2px;
+}
+
+.order_banner h1:nth-of-type(1){
+    left: 35%;
+    top: 25%;
+}
+
+.order_banner h1:nth-of-type(2){
+    left: 12%;
+    top: 50%;
+}
+
+/* --選擇內容-- */
+.order_choose{
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.order_choose h4{
+    line-height: 30px;
+    margin-left: 40px;
+}
+
+.order_choose h6{
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #D9D9D9;
+    padding: 0 10px;
+    line-height: 35px;
+    margin: 10px 10px 20px 0;
+}
+
+.order_choose > a:first-of-type{
+    margin-left: 40px;
+}
+
+.order_choose_num{
+    margin: 10px auto 20px 40px;
+}
+
+/* .order_choose_num input{
+    margin-right: 3px;
+}
+
+.order_choose_num input:nth-of-type(2){
+    width: 30px;
+    height: 28px;
+    text-align: center;
+    padding: 0;
+}
+
+.order_choose_num input:nth-of-type(1), .order_choose_num input:nth-of-type(3){
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+} */
+
+.order_choose_pic{
+    position: relative;
+}
+
+.order_choose_pic a{
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    font-size: 20px;
+    background-color: #6D6D6D;
+    color: white;
+    z-index: 1;
+
+    position: absolute;
+}
+
+.order_choose_pic a:first-child{
+    margin-left: 40px;
+    left: -17px;
+    text-align: left;
+}
+
+.order_choose_pic a:last-child{
+    right: 20px;
+    text-align: right;
+}
+
+.order_choose_pic ul{
+    display: flex;
+    margin: 0 40px;
+    overflow: hidden;
+}
+
+.order_choose_pic li{
+    border: #fff 1px solid;
+    flex-shrink: 0;
+    display: inline-block;
+    width: 190px;
+    height: 190px;
+    margin: 0;
+    background-size: contain;
+
+    position: relative;
+}
+
+.order_choose_pic li:nth-of-type(1){
+    background-image: url("../img/order_choose_pic_2.jpg");
+}
+
+.order_choose_pic li:nth-of-type(2){
+    background-image: url("../img/order_choose_pic_3.jpg");
+}
+
+.order_choose_pic li:nth-of-type(3){
+    background-image: url("../img/order_choose_pic_4.jpg");
+}
+
+.order_choose_pic li:nth-of-type(4){
+    background-image: url("../img/order_choose_pic_5.jpg");
+}
+
+.order_choose_pic li:nth-of-type(5){
+    background-image: url("../img/order_choose_pic_6.jpg");
+}
+
+.order_choose_pic li:nth-of-type(6){
+    background-image: url("../img/order_choose_pic_1.jpg");
+}
+
+.order_choose_pic li:nth-of-type(7){
+    background-image: url("../img/order_choose_pic_2.jpg");
+}
+
+.order_choose_pic li span:nth-of-type(1){
+    position: absolute;
+    font-size: 15px;
+    font-weight: lighter;
+    background-color: rgb(0, 0, 0, .3);
+    color: #FCFAF2;
+    padding: 1px;
+    z-index: 1;
+}
+
+.order_choose_pic li span:nth-of-type(2){
+    display: none;
+    position: absolute;
+    background-color: rgb(0, 0, 0, .3);
+    width: 190px;
+    height: 190px;
+    background-image: url("../img/order_choose_icon.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 50px 50px;
+}
+
+.order_choose_pic li:nth-child(n):hover span{
+    display: block;
+}
+
+.order_choose_result{
+    /* width: 100%; */
+    margin-left: 40px;
+    display: flex;
+}
+
+.order_choose_result div{
+    width: 70%;
+    height: 100px;
+    border: #6D6D6D 3px solid;
+    margin: 10px 10px 0 0;
+    display: inline-block;
+}
+
+.order_choose_result button{
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #F4E2A6;
+    border: none;
+    margin: 60px 10px 0 0;
+    align-self: flex-end;
+}
+
+/* --訂做須知-- */
+.order_main > p{
+    margin-left: 40px;
+}
+
+.order_main > p a{
+    text-decoration: underline;
+}
+
+.order_main > p:last-of-type{
+    margin-bottom: 60px;
+}
+
+/* --訂做詳細資訊-- */
+.order_detail{
+    width: 80%;
+    margin: 40px 40px 60px;
+}
+
+.order_detail li{
+    border-bottom: #D9D9D9 2px solid;
+    border-style: dashed;
+    height: auto;
+    margin-bottom: 10px;
+    /* border: #000 1px solid; */
+
+    position: relative;
+}
+
+.order_detail h4{
+    line-height: 40px;
+}
+
+.order_detail li a{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+.order_detail p{
+    display: none;
+    line-height: 30px;
+}
+
+/* --展開-- */
+.order_detail li:nth-of-type(n):hover p{
+    display: block;
+}

@@ -1,0 +1,259 @@
+@import url('basic_settings.css');
+
+/* ---------------------購物車頁step1--------------------- */
+.cart_main{
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart_main h4{
+    text-indent: 40px;
+    line-height: 60px;
+    font-weight: 500;
+}
+
+.cart_main input, .cart_main thead td{
+    font-size: 18px;
+}
+
+/* --上面-- */
+.cart_top{
+    width: 100%;
+    height: auto;
+    padding-bottom: 15px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.cart_top h6:nth-of-type(1){
+    background-color: #eeeded;
+}
+
+.cart_top h6:nth-of-type(1) > span{
+    color: #6D6D6D;
+}
+
+.cart_top h6:nth-of-type(2){
+    display: block;
+    width: 100%;
+    line-height: 45px;
+    background-color: #BDE0CE;
+    text-indent: 40px;
+}
+
+.cart_top table{
+    width: 90%;
+    margin: 0 40px 5px;
+}
+
+.cart_top table tr{
+    text-align: center;
+}
+
+.cart_top table td{
+    padding: 10px;
+    vertical-align: middle
+}
+
+.cart_top table thead{
+    font-size: 24px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #D9D9D9;
+}
+
+.cart_top table tbody tr:nth-child(odd){
+    background-color: #EEEDED;
+}
+
+.cart_top table td img{
+    width: 100px;
+}
+
+.cart_num{
+    height: 10px;
+}
+
+.cart_top .cart_num input:nth-of-type(2){
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+}
+
+.cart_top .cart_num input:nth-of-type(1), .cart_top .cart_num input:nth-of-type(3){
+    width: 22px;
+    height: 25px;
+    font-size: 15px;
+    padding: 0;
+}
+
+/* --下左邊-- */
+.cart_left{
+    width: 40%;
+    margin: 4px 2px 0 0;
+    background-color: #fff;
+}
+
+.cart_right{
+    width: calc(60% - 4px);
+    margin: 4px 0 0 2px;
+}
+
+.cart_left input{
+    margin: 5px 0 10px 65px;
+}
+
+.cart_left input:nth-of-type(3){
+    display: block;
+    margin: 5px 0 15px 80px;
+    width: 60%;
+    height: 24px;
+    font-size: 13px;
+}
+
+.cart_left span{
+    color:#6D6D6D;
+    font-size: 13px;
+}
+
+/* --下右邊-- */
+.cart_right{
+    background-color: #fff;
+}
+
+.cart_right table{
+    margin: 0 40px 0;
+    border: #000 1px solid;
+    width: 83%;
+    height: auto;
+}
+
+.cart_right table tr{
+    line-height: 25px;
+    border: #fff 2px solid;
+    background-color: #BDE0CE;
+    text-align: left;
+}
+
+.cart_right table td{
+    padding: 5px 10px;
+}
+
+.cart_right tbody tr td:nth-child(2) ~ td{
+    text-align: right;
+}
+
+.cart_right tbody tr:last-child{
+    border-bottom: #000 1px solid;
+}
+
+.cart_right table tfoot tr{
+    background-color: #fff;
+    text-align: right;
+    border-top: #000 1px solid;
+}
+
+.cart_right input{
+    float: right;
+    margin-bottom: 20px;
+    margin-right: 11%;
+    font-size: 18px;
+    height: 40px;
+}
+
+/* ---------------------購物車頁step2--------------------- */
+.cart2_main input{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    height: 17px;
+}
+
+.cart2_main_margin{
+    margin-left: 40px;
+}
+
+.cart2_top{
+    background-color: #fff;
+}
+
+.cart2_top a:nth-of-type(1){
+    color: #6D6D6D;
+}
+
+.cart2_top_flex{
+    display: flex;
+}
+
+.cart2_top input:nth-of-type(1), .cart2_top input:nth-of-type(2){
+    height: 13px;
+}
+
+.cart2_top_left, .cart2_top_right{
+    flex-grow: 1;
+    width: 50%;
+}
+
+.cart2_bleft{
+    flex-grow: 1;
+    background-color: #fff;
+    border-right: #EEEDED 2px solid;
+    border-top: #EEEDED 4px solid;
+}
+
+.cart2_bright{
+    flex-grow: 1;
+    background-color: #fff;
+    border-left: #EEEDED 2px solid;
+    border-top: #EEEDED 4px solid;
+}
+
+.cart2_top input{
+    width: 40px;
+}
+
+.cart2_bright .button{
+    float: right;
+    margin-bottom: 20px;
+    margin-right: 10%;
+    font-size: 18px;
+    height: 40px;
+}
+
+/* ---------------------購物車頁step3--------------------- */
+.cart3{
+    height: 450px;
+}
+
+.cart3 h2, .cart3 i, .cart3 h4{
+    display: block;
+    text-align: center;
+}
+
+.cart3 h2{
+    margin-top: 80px;
+}
+
+.cart3 i{
+    height: 80px;
+    width: 80px;
+    margin: 40px auto 0;
+    color: #BDE0CE;
+    font-size: 80px;
+}
+
+.cart3 h4{
+    margin-top: 30px;
+    font-weight: normal;
+}
+
+.cart3 a{
+    text-decoration: underline;
+}
+
+.cart3 a:nth-of-type(1), .cart3 a:nth-of-type(2){
+    text-decoration: none;
+    color: #6D6D6D;
+}

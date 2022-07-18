@@ -1,0 +1,335 @@
+@import url('basic_settings.css');
+
+/* identify */
+nav ul:first-of-type li:nth-child(3) a{
+    color: #6D6D6D;
+    text-shadow: 3px 3px 2px #BDE0CE;
+}
+
+/* ---------------------認識花材頁--------------------- */
+.identify1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+/* 介紹的內容 */
+.identify1_main{
+    display: flex;
+    width: 70%;
+    height: 600px;
+    padding: 10px;
+    background-color: #FCFAF2;
+}
+
+.identify1_main img{
+    width: 440px;
+    height: 582px;
+}
+
+.identify1_main_word{
+    width: 35%;
+    margin-top: 35px;
+    margin-left: 55px;
+}
+
+.identify1_main_word h4{
+    background-color: #BDE0CE;
+    color: #FCFAF2;
+    text-align: center;
+    padding: 15px 0;
+    display: block;
+    width: 140px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.identify1_main_word h4:nth-of-type(2){
+    background-color: #9ED8EB;
+}
+
+.identify1_main_word h6{
+    margin-bottom: 60px;
+}
+
+/* 旁邊推薦區 */
+.identify1_advise{
+    width: 25%;
+    height: 520px;
+
+    position: relative;
+}
+
+.identify1_advise > span{
+    background-image: url('../img/identify_line.png');
+    display: block;
+    width: 228px;
+    height: 467px;
+
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 25px;
+}
+
+.identify1_advise a{
+    display: inline-block;
+    width: 170px;
+    height: 170px;
+    border-radius: 100%;
+    background-size: contain;
+}
+
+.identify1_advise a:nth-of-type(1){
+    background-image: url('../img/product_li_5.jpg');
+    float: right;
+    margin-right: 40px;
+}
+
+.identify1_advise a:nth-of-type(2){
+    background-image: url('../img/product_li_6.jpg');
+}
+
+.identify1_advise a:nth-of-type(3){
+    background-image: url('../img/product_li_7.jpg');
+    float: right;
+    margin-right: 40px;
+}
+
+.identify1_advise a span{
+    display: inline-block;
+    width: 170px;
+    height: 170px;
+    border-radius: 100%;
+    background-color:rgb(217, 217, 217, .5); 
+}
+
+.identify1_advise a:hover span{
+    display: none;
+}
+
+/* 針對左右邊做的微調 */
+.identify_main ul:nth-of-type(even) .identify1_advise > span{
+    transform: rotateY(180deg);
+    left: 0;
+}
+
+.identify_main ul:nth-of-type(even) .identify1_advise a:nth-of-type(1){
+    float: none;
+    margin-left: 40px;
+}
+
+.identify_main ul:nth-of-type(even) .identify1_advise a:nth-of-type(2){
+    float: right;
+}
+
+.identify_main ul:nth-of-type(even) .identify1_advise a:nth-of-type(3){
+    float: none;
+    margin-left: 40px;
+}
+
+/* 下方警語 */
+.identify_main > span{
+    background-image: url("../img/identify_icon.png");
+    width: 45px;
+    height: 45px;
+    display: block;
+    margin: 60px auto 10px;
+}
+
+.identify_main > h6{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 60px;
+}
+
+
+/* .identify {
+    margin-bottom: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.identify li{
+    margin: 0;
+}
+
+.identify li:nth-child(1){
+    padding: 10px;
+    width: 67%;
+    background-color: #FCFAF2;
+}
+
+.identify li:nth-child(1) img{
+    width: 50%;
+    float: left;
+}
+
+.identify li:nth-child(2){
+    width: 25%;
+}
+
+.identify li h4:nth-of-type(2){
+    background-color: #9ED8EB;
+    color: #FCFAF2;
+}
+
+.identify h4, .identify h5{
+    width: 37%;
+    float: right;
+    margin-right: 60px;
+} */
+/*第一次寫暫定*/
+/* .identify h4{
+    background-color: #BDE0CE;
+    color: #FCFAF2;
+    margin-top: 30px;
+    display: block;
+    width: 155px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 5px;
+    margin-right: 200px;
+}
+
+.identify h5{
+    margin-top: 25px;
+}
+
+.identify li:nth-child(2){
+    width: 25%;
+    position: relative;
+    margin-right: 40px;
+}
+
+.identify li:nth-child(2) img{
+    display: block;
+    width: 170px;
+    margin-right: 20px;
+    border-radius: 100%;
+}
+
+.identify li:nth-child(2) img:nth-child(2){
+    float: right;
+}
+
+.identify li:nth-child(2) img:nth-child(4){
+    float: right;
+}
+
+.identify li:nth-child(2) span{
+    background-image: url('../img/identify_line.png');
+    position: absolute;
+    width: 75%;
+    height: 90%;
+    background-repeat: no-repeat;
+    display: block;
+    right: -10px;
+    margin: 40px auto 15px;
+    z-index: -1;
+} */
+
+/* 介紹靠右的介紹/第二次嘗試 */
+/* .identify2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.identify2 li:nth-child(2){
+    display: flex;
+    padding: 10px;
+    background-color: #FCFAF2;
+    border: #000 1px solid;
+}
+
+.identify2 li:nth-child(2) img{
+    width: 50%;
+}
+
+.identify2 li:nth-child(2) div{
+    width: 35%;
+    margin-top: 35px;
+    margin-left: 55px;
+}
+
+.identify2 li:nth-child(2) h4{
+    background-color: #BDE0CE;
+    color: #FCFAF2;
+    text-align: center;
+    padding: 15px 0;
+    display: block;
+    width: 140px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.identify2 li:nth-child(2) h4:nth-of-type(2){
+    background-color: #9ED8EB;
+}
+
+.identify2 li:nth-child(2) h5{
+    margin-bottom: 60px;
+} */
+
+/* 介紹靠右的推薦商品/第二次嘗試 */
+/* .identify2 li:nth-child(1){
+    width: 65%;
+    position: relative;
+    margin: auto;
+}
+
+.identify2 li:nth-child(1) a{
+    background-image: url('../img/product_li_5.jpg');
+    display: inline-block;
+    width: 170px;
+    height: 170px;
+    border-radius: 100%;
+    background-size: contain;
+}
+
+.identify2 li:nth-child(1) span{
+    background-image: url('../img/identify_line.png');
+    display: block;
+    width: 228px;
+    height: 467px;
+    position: absolute;
+    transform: rotateY(180deg);
+    z-index: -1;
+    margin-top: 30px;
+}
+
+.identify2 li:nth-child(1) a:nth-of-type(2){
+    float: right;
+    margin-right: 40px;
+}
+
+.identify2 li:nth-child(1) a:nth-of-type(1){
+    margin-left: 40px;
+}
+
+.identify2 li:nth-child(1) a:nth-of-type(3){
+    margin-left: 40px;
+}
+
+.identify_main span{
+    background-image: url("../img/identify_icon.png");
+    width: 45px;
+    height: 45px;
+    display: block;
+    margin: 60px auto 10px;
+}
+
+.identify_main p{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+} */
+
+
