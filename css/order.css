@@ -3,7 +3,7 @@
 /* order */
 nav ul:first-of-type li:nth-child(5) a{
     color: #6D6D6D;
-    text-shadow: 3px 3px 2px #BDE0CE;
+    /* text-shadow: 3px 3px 2px #BDE0CE; */
 }
 
 /* ---------------------訂做商品頁--------------------- */

@@ -3,7 +3,7 @@
 /* identify */
 nav ul:first-of-type li:nth-child(3) a{
     color: #6D6D6D;
-    text-shadow: 3px 3px 2px #BDE0CE;
+    /* text-shadow: 3px 3px 2px #BDE0CE; */
 }
 
 /* ---------------------認識花材頁--------------------- */
@@ -102,12 +102,24 @@ nav ul:first-of-type li:nth-child(3) a{
     width: 170px;
     height: 170px;
     border-radius: 100%;
-    background-color:rgb(217, 217, 217, .5); 
+    background-color:rgb(217, 217, 217); 
+    opacity: .5;
 }
 
+/* hover效果 */
 .identify1_advise a:hover span{
-    display: none;
+    opacity: 0;
+    /* animation: identify_hover .7 1; */
 }
+
+/* @keyframes identify_hover{
+    0%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 0;
+    } 
+}*/
 
 /* 針對左右邊做的微調 */
 .identify_main ul:nth-of-type(even) .identify1_advise > span{

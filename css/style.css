@@ -1908,7 +1908,8 @@ footer > a{
     height: 80px;
     width: 80px;
     margin: 40px auto 0;
-    border: #000 1px solid;
+    color: #BDE0CE;
+    font-size: 80px;
 }
 
 .cart3 h4{

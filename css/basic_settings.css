@@ -20,6 +20,10 @@ body{
     border: none;
 }
 
+/* .button:hover{
+    transform: scale(0.9);
+} */
+
 /* --數字按鈕-- */
 .num_botton input{
     height: 30px;
@@ -91,10 +95,10 @@ p{
     text-shadow: 3px 3px 2px #BDE0CE;
 } */
 
-/* nav ul:first-of-type li:nth-child(4) ol a{
+nav ul:first-of-type li:nth-child(4) ol a{
     color: #000;
     text-shadow: none;
-} */
+}
 
 /* order */
 /* nav ul:first-of-type li:nth-child(5) a{
@@ -220,6 +224,7 @@ nav ul:first-of-type li:nth-child(4) ol a:hover{
 /* ---------------------footer--------------------- */
 footer ul{
     display: flex;
+    margin-bottom: 0;
 }
 
 footer li{
@@ -283,11 +288,12 @@ footer h5{
 }
 
 footer p{
+    margin-top: 5px;
     font-size: 15px;
     line-height: 30px;
 }
 
 footer > a{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     text-decoration: underline;
 }
