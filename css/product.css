@@ -1,7 +1,7 @@
 @import url('basic_settings.css');
 
 /* product */
-nav ul:first-of-type li:nth-child(4) a{
+header nav ul li:nth-child(4) a{
     color: #6D6D6D;
     /* text-shadow: 3px 3px 2px #BDE0CE; */
 }
@@ -9,6 +9,7 @@ nav ul:first-of-type li:nth-child(4) a{
 /* ---------------------商品頁--------------------- */
 /* --上方-- */
 .product_main{
+    margin-bottom: 60px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -51,8 +52,10 @@ nav ul:first-of-type li:nth-child(4) a{
     width: 15%;
     height: 400px;
     display: inline-block;
-    border: #BDE0CE 8px solid;
-    border-radius: 10px;
+    border: #BDE0CE 3px solid;
+    border-radius: 5px;
+
+    margin-left: 60px;
 
     position: relative;
 }
@@ -95,16 +98,20 @@ nav ul:first-of-type li:nth-child(4) a{
 }
 
 .product_list li{
-    margin: 0 17px 60px 17px;
+    margin: 0 20px 34px 20px;
 
     position: relative;
 }
 
 .product_list li img{
-    width: 270px;
-    height: 270px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 5px;
+}
+
+.product_list li h4, .product_list li p{
+    margin-top: 7px;
 }
 
 /* 可以hover圖片再跑button出來就好嗎 */
@@ -114,12 +121,6 @@ nav ul:first-of-type li:nth-child(4) a{
 
 .product_list li button{
     display: none;
-    height: 50px;
-    font-size: 24px;
-    font-weight: bold;
-    border-radius: 5px;
-    background-color: #F4E2A6;
-    border: none;
 
     position: absolute;
     top: 0;
@@ -128,25 +129,25 @@ nav ul:first-of-type li:nth-child(4) a{
 }
 
 .product_list li button:first-of-type{
-    width: 50px;
+    width: 40px;
     left: 72px;
     background-image: url("../img/product_icon_cart.png");
-    background-position: 12px 11px;
+    background-position: 9px 8px;
     background-repeat: no-repeat;
 }
 
 .product_list li button:last-of-type{
-    width: 70px;
+    width: 60px;
     right: 72px;
 }
 
 /* ---------------------商品頁1--------------------- */
 .product1_main{
-    margin-top: 60px;
+    margin-top: 120px;
 }
 
 .product1_main > p{
-    margin-left: 50px;
+    margin-left: 40px;
     margin-bottom: 10px;
 }
 
@@ -159,7 +160,7 @@ nav ul:first-of-type li:nth-child(4) a{
 }
 
 .product1_top_imgs{
-    margin-left: 50px;
+    margin-left: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -173,7 +174,7 @@ nav ul:first-of-type li:nth-child(4) a{
     display: flex;
 }
 
-.product1_top img{
+.product1_top > img{
     width: 510px;
     margin-left: 10px;
 }
@@ -193,18 +194,21 @@ nav ul:first-of-type li:nth-child(4) a{
     margin-top: 90px;
 }
 
-.product1_top_word span{
-    background-image: url("../img/identify_icon.png");
-    display: inline-block;
+/* 對齊 不能 */
+.product1_top_word_warn{
+    height: 24px;
+}
+
+.product1_top_word_warn img{
     width: 18px;
     height: 18px;
-    background-size: cover;
-    margin: 5px 5px 0 0;
-}
-/* 對齊 不能 */
-.product1_top_word p{
     display: inline-block;
-    line-height: 15px;
+    margin: 5px auto 0 auto;
+}
+
+.product1_top_word_warn p{
+    display: inline-block;
+    line-height: 24px;
 }
 
 .product1_top_word_num{
@@ -240,11 +244,6 @@ nav ul:first-of-type li:nth-child(4) a{
 .product1_recommend li img{
     width: 220px;
     height: 220px;
-}
-
-.product1_recommend li button{
-    height: 40px;
-    font-size: 18px;
 }
 
 .product1_recommend li button:first-of-type{

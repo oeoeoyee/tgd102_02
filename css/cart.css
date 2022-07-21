@@ -3,10 +3,15 @@
 /* ---------------------購物車頁step1--------------------- */
 .cart_main{
     width: 80%;
-    margin-top: 30px;
+    margin-top: 130px;
     margin-bottom: 60px;
     display: flex;
     flex-wrap: wrap;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cart_top, .cart_left, .cart_right{
+    background-color: #fff;
 }
 
 .cart_main h4{
@@ -15,7 +20,7 @@
     font-weight: 500;
 }
 
-.cart_main input, .cart_main thead td{
+.cart_main thead td{
     font-size: 18px;
 }
 
@@ -25,11 +30,10 @@
     height: auto;
     padding-bottom: 15px;
     margin: 0 auto;
-    background-color: #fff;
 }
 
 .cart_top h6:nth-of-type(1){
-    background-color: #eeeded;
+    background-color: #fff;
 }
 
 .cart_top h6:nth-of-type(1) > span{
@@ -73,11 +77,48 @@
     width: 100px;
 }
 
-.cart_num{
-    height: 10px;
+.cart_top .num_botton{
+    width: 105px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.cart_top .cart_num input{
+    width: 22px;
+    height: 30px;
+    font-family: arial;
+    margin-left: 3px;
 }
 
 .cart_top .cart_num input:nth-of-type(2){
+    width: 25px;
+    height: 30px;
+    font-size: 14px;
+}
+
+/* 
+.num_botton input{
+    height: 30px;
+    width: 30px;
+    flex-basis: 30px;
+    margin-left: 5px;
+}
+
+.num_botton input:nth-of-type(2){
+    width: 30px;
+    height: 27px;
+    text-align: center;
+    padding: 0;
+}
+
+.num_botton input:nth-of-type(1), .num_botton input:nth-of-type(3){
+    font-size: 20px;
+    background-color: #fff;
+    border: 1px solid #6D6D6D;
+    border-radius: 2px;
+} */
+
+/* .cart_top .cart_num input:nth-of-type(2){
     width: 20px;
     height: 20px;
     font-size: 15px;
@@ -88,13 +129,12 @@
     height: 25px;
     font-size: 15px;
     padding: 0;
-}
+} */
 
 /* --下左邊-- */
 .cart_left{
     width: 40%;
     margin: 4px 2px 0 0;
-    background-color: #fff;
 }
 
 .cart_right{
@@ -104,6 +144,7 @@
 
 .cart_left input{
     margin: 5px 0 10px 65px;
+    width: 40px;
 }
 
 .cart_left input:nth-of-type(3){
@@ -120,10 +161,6 @@
 }
 
 /* --下右邊-- */
-.cart_right{
-    background-color: #fff;
-}
-
 .cart_right table{
     margin: 0 40px 0;
     border: #000 1px solid;
@@ -183,12 +220,12 @@
     color: #6D6D6D;
 }
 
-.cart2_top_flex{
-    display: flex;
+.cart2_top input{
+    width: 40px;
 }
 
-.cart2_top input:nth-of-type(1), .cart2_top input:nth-of-type(2){
-    height: 13px;
+.cart2_top_flex{
+    display: flex;
 }
 
 .cart2_top_left, .cart2_top_right{
@@ -203,6 +240,10 @@
     border-top: #EEEDED 4px solid;
 }
 
+#cart2_pickinfo_mail{
+    width: 230px;
+}
+
 .cart2_bright{
     flex-grow: 1;
     background-color: #fff;
@@ -210,18 +251,13 @@
     border-top: #EEEDED 4px solid;
 }
 
-.cart2_top input{
-    width: 40px;
-}
-
 .cart2_bright .button{
     float: right;
     margin-bottom: 20px;
     margin-right: 10%;
-    font-size: 18px;
-    height: 40px;
+    font-size: 20px;
+    height: 50px;
 }
-
 /* ---------------------購物車頁step3--------------------- */
 .cart3{
     height: 450px;

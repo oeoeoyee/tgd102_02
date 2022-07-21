@@ -5,33 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/order.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet">
     <title>百日花藝-訂做商品頁</title>
 </head>
 <body>
-    <nav><!-- 導覽列 -->
-        <ul>
-            <li><a href="index.html"><img src='./img/logo.png' alt=""></a></li>
-            <li><a href="news.html">花藝情報</a></li>
-            <li><a href="identify.html">認識花材</a></li>
-            <li><a href="product.html">商品</a>
-                <ol>
-                    <li><a href="product.html">最新商品</a></li>
-                    <li><a href="product.html">花圈</a></li>
-                    <li><a href="product.html">盆花</a></li>
-                    <li><a href="product.html">瓶插花</a></li>
-                    <li><a href="product.html">花束</a></li>
-                </ol>
-            </li>
-            <li><a href="order.html">訂做商品</a></li>
-        </ul>
+    <header><!-- 導覽列 -->
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src='./img/logo.png' alt=""></a></li>
+                <li><a href="news.html">花藝情報</a></li>
+                <li><a href="identify.html">認識花材</a></li>
+                <li><a href="product.html">商品</a>
+                    <ol>
+                        <li><a href="product.html">最新商品</a></li>
+                        <li><a href="product.html">花圈</a></li>
+                        <li><a href="product.html">盆花</a></li>
+                        <li><a href="product.html">瓶插花</a></li>
+                        <li><a href="product.html">花束</a></li>
+                    </ol>
+                </li>
+                <li><a href="order.html">訂做商品</a></li>
+            </ul>
+        </nav>
         <ul class="nav_icon">
             <li class="nav_icon1"><input type="text" placeholder="想要什麼商品？"><a href="#"></a></li>
             <li class="nav_icon2"><a href="#"></a></li>
             <li class="nav_icon3"><a href="cart.html"></a></li>
             <li class="nav_icon4"><a href="#"></a></li>
         </ul>
-    </nav>
+    </header>
 
     <main class="main_block order_main"><!-- 主要內容 -->
         <div class="order_banner">
@@ -53,21 +56,21 @@
                 <input type="button" value="+">
             </div>
             <div class="order_choose_pic">
-                <a href="">〈</a>
+                <i class="fa-solid fa-chevron-left arrow_button"></i>
                 <ul>
-                    <li><span>尤加利葉</span><span></span></li>
-                    <li><span>金合歡</span><span></span></li>
-                    <li><span>大理花</span><span></span></li>
-                    <li><span>芍藥</span><span></span></li>
-                    <li><span>中康乃馨</span><span></span></li>
-                    <li><span>繡球花</span><span></span></li>
+                    <li><span>尤加利葉</span><span>+</span></li>
+                    <li><span>金合歡</span><span>+</span></li>
+                    <li><span>大理花</span><span>+</span></li>
+                    <li><span>芍藥</span><span>+</span></li>
+                    <li><span>中康乃馨</span><span>+</span></li>
+                    <li><span>繡球花</span><span>+</span></li>
                 </ul>
-                <a href="">〉</a>
+                <i class="fa-solid fa-chevron-right arrow_button"></i>
             </div>
             <div class="order_choose_result">
                 <div class="order_choose_result_tag"></div>
-                <button>加入購物車</button>
-                <button><a href="cart.html">直接購買</a></button>
+                <button class="button">加入購物車</button>
+                <button class="button"><a href="cart.html">直接購買</a></button>
             </div>
             
         </div>

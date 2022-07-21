@@ -1,7 +1,7 @@
 @import url('reset.css');
 
 body{
-    background-color: #EEEDED;
+    background-color: #fff;
     font-family: 'Kiwi Maru', serif, "微軟正黑體", arial;
     box-sizing: border-box;
 }
@@ -11,22 +11,31 @@ body{
     margin: 120px auto 0;
 }
 
+/* --普通黃色按鈕-- */
 .button{
-    height: 50px;
-    font-size: 20px;
-    font-weight: bold;
+    height: 40px;
+    font-size: 18px;
+    /* font-weight: bold; */
+    font-family: 'Kiwi Maru';
     border-radius: 5px;
     background-color: #F4E2A6;
     border: none;
+    padding: 1px 6px;
 }
 
-/* .button:hover{
-    transform: scale(0.9);
-} */
+/* --加減數字按鈕-- */
+.num_botton{
+    display: flex;
+    align-items: center;
+    width: 105px;
+}
 
-/* --數字按鈕-- */
 .num_botton input{
     height: 30px;
+    width: 30px;
+    flex-basis: 30px;
+    margin-left: 5px;
+    font-family: arial;
 }
 
 .num_botton input:nth-of-type(2){
@@ -37,13 +46,33 @@ body{
 }
 
 .num_botton input:nth-of-type(1), .num_botton input:nth-of-type(3){
-    width: 30px;
-    height: 30px;
     font-size: 20px;
-    text-align: center;
+    background-color: #fff;
+    border: 1px solid #6D6D6D;
+    border-radius: 2px;
 }
 
+/* --左右箭頭按鈕-- */
+.arrow_button{
+    position: absolute;
+    width: 20px;
+    height: 25px;
+    border-radius: 2px;
+    font-size: 10px;
+    text-align: center;
+    color: #fff;
+    background-color: #6d6d6d;
+    /* line-height在這裡會被fontawesome蓋過去 */
+}
 /* --字體基本設定-- */
+input{
+    font-family: 'Kiwi Maru';
+    font-size: 13px;
+    padding: 3px;
+    border: 1px #6D6D6D solid;
+    border-radius: 2px;
+}
+
 a{
     text-decoration: none;
     color: #000;
@@ -78,30 +107,30 @@ p{
 
 /* --nav變色-- */
 /* news */
-/* nav ul:first-of-type li:nth-child(2) a{
+/* header nav ul li:nth-child(2) a{
     color: #6D6D6D;
     text-shadow: 3px 3px 2px #BDE0CE;
 } */
 
 /* identify */
-/* nav ul:first-of-type li:nth-child(3) a{
+/* header nav ul li:nth-child(3) a{
     color: #6D6D6D;
     text-shadow: 3px 3px 2px #BDE0CE;
 } */
 
 /* product */
-/* nav ul:first-of-type li:nth-child(4) a{
+/* header nav ul li:nth-child(4) a{
     color: #6D6D6D;
     text-shadow: 3px 3px 2px #BDE0CE;
 } */
 
-nav ul:first-of-type li:nth-child(4) ol a{
+header nav ul li:nth-child(4) ol a{
     color: #000;
     text-shadow: none;
 }
 
 /* order */
-/* nav ul:first-of-type li:nth-child(5) a{
+/* header nav ul li:nth-child(5) a{
     color: #6D6D6D;
     text-shadow: 3px 3px 2px #BDE0CE;
 } */
@@ -111,78 +140,80 @@ nav ul:last-of-type li:nth-child(3) a{} */
 
 /* ---------------------導覽列--------------------- */
 /* search框框對齊不上去 */
-nav{
+header{
     width: 100%;
     margin: 0 auto;
     background-color: #fff;
+    box-shadow: rgba(0, 0, 0, .3) 1px 1px 3px;
     height: 90px;
     display: flex;
     justify-content: space-between;
 
-    /* position: fixed;
-    z-index: 1; */
+    position: fixed;
+    z-index: 3;
+    top: 0;
 }
 
-nav ul{
+header ul{
     display: flex;
     padding: 0 10px;
 }
 
-nav ul:nth-child(1){
+header nav ul{
     margin-right: 10px;
 }
 
-nav ul li{
-    padding: 10px 7px;
+header ul li{
+    padding: 10px 10px;
     line-height: 70px;
     font-size: 24px;
 }
 
-nav ul:first-of-type img{
+header nav ul:first-of-type img{
     height: 70px;
 }
 
 /* --子選單-- */
-nav ul:first-of-type li:nth-of-type(4){
+header nav ul > li:nth-of-type(4){
     position: relative;
 }
 
-nav ul:first-of-type li:nth-of-type(4) ol{
+header nav ul li:nth-of-type(4) ol{
     width: 105px;
-    text-align: left;
+    text-align: center;
     /* display: flex; */
     display: none;
 
     position: absolute;
-    top: 90px;
-    left: -2px;
+    top: 89px;
+    transform: translate(-25%);
     z-index: 1;
 }
 
-nav ul:first-of-type li:nth-of-type(4) ol li{    
+header nav ul li:nth-of-type(4) ol li{    
     padding: 0;
     background-color: #fff;
 }
 
-nav ul:first-of-type li:nth-of-type(4) ol li a{
+header nav ul li:nth-of-type(4) ol li a{
     line-height: 50px;  
     font-size: 20px;
-    text-indent: 0.5em;
+    /* text-indent: 0.5em; */
     width: 100%;
     display: block;
 }
 
 /* --hover-- */
-nav ul:first-of-type li:nth-child(4):hover ol{
+header nav ul li:nth-child(4):hover ol{
     display: block;    
 }
 
-nav ul:first-of-type li:hover > a{
+header nav ul li:hover > a{
     color: #6D6D6D;
     text-shadow: 3px 3px 2px #BDE0CE;
 }
 
-nav ul:first-of-type li:nth-child(4) ol a:hover{
+header nav ul li:nth-child(4) ol a:hover{
     color: #6D6D6D;
     text-shadow: 3px 3px 2px #BDE0CE;
 }
@@ -230,8 +261,8 @@ footer ul{
 footer li{
     width: 33%;
     height: 175px;
-    background-color: #6D6D6D;
-    color:#fff;
+    background-color: #BDE0CE;
+    color:#000;
     font-weight: lighter;
     margin: 0;
     text-align: center;
@@ -242,7 +273,7 @@ footer li{
 
 footer li:nth-child(2){
     width: 34%;
-    background-color: #D9D9D9;
+    background-color: #EEEDED;
     color:#000;
 }
 

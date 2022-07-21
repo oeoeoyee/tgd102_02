@@ -9,29 +9,31 @@
     <title>百日花藝-購物車</title>
 </head>
 <body>
-    <nav><!-- 導覽列 -->
-        <ul>
-            <li><a href="index.html"><img src='./img/logo.png' alt=""></a></li>
-            <li><a href="news.html">花藝情報</a></li>
-            <li><a href="identify.html">認識花材</a></li>
-            <li><a href="product.html">商品</a>
-                <ol>
-                    <li><a href="product.html">最新商品</a></li>
-                    <li><a href="product.html">花圈</a></li>
-                    <li><a href="product.html">盆花</a></li>
-                    <li><a href="product.html">瓶插花</a></li>
-                    <li><a href="product.html">花束</a></li>
-                </ol>
-            </li>
-            <li><a href="order.html">訂做商品</a></li>
-        </ul>
+    <header><!-- 導覽列 -->
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src='./img/logo.png' alt=""></a></li>
+                <li><a href="news.html">花藝情報</a></li>
+                <li><a href="identify.html">認識花材</a></li>
+                <li><a href="product.html">商品</a>
+                    <ol>
+                        <li><a href="product.html">最新商品</a></li>
+                        <li><a href="product.html">花圈</a></li>
+                        <li><a href="product.html">盆花</a></li>
+                        <li><a href="product.html">瓶插花</a></li>
+                        <li><a href="product.html">花束</a></li>
+                    </ol>
+                </li>
+                <li><a href="order.html">訂做商品</a></li>
+            </ul>
+        </nav>
         <ul class="nav_icon">
             <li class="nav_icon1"><input type="text" placeholder="想要什麼商品？"><a href="#"></a></li>
             <li class="nav_icon2"><a href="#"></a></li>
             <li class="nav_icon3"><a href="cart.html"></a></li>
             <li class="nav_icon4"><a href="#"></a></li>
         </ul>
-    </nav>
+    </header>
 
     <main class="main_block cart_main cart2_main">
         <div class="cart_top cart2_top">
@@ -40,9 +42,9 @@
             <h4>付款資訊</h4>
             <div class="cart2_top_flex">
                 <div class="cart2_top_left cart2_main_margin">
-                    <input type="radio" name="cart2_payinfo" id="">ATM轉帳
+                    <input type="radio" name="cart2_payinfo" id="cart2_payinfo_atm"><label for="cart2_payinfo_atm">ATM轉帳</label>
                     <br>
-                    <input type="radio" name="cart2_payinfo" id="">信用卡付款
+                    <input type="radio" name="cart2_payinfo" id="cart2_payinfo_credit"><label for="cart2_payinfo_credit">信用卡付款</label>
                 </div>
                 <div class="cart2_top_right cart2_main_margin">
                     <label for="cart2_payinfo_card_num">卡號
@@ -67,7 +69,7 @@
         <div class="cart2_bleft">
             <h4>領貨人資訊</h4>
             <div class="cart2_main_margin">
-                <input type="checkbox" name="" id="">領貨人資訊同會員資訊
+                <input type="checkbox" name="" id="cart2_pickinfo_1"><label for="cart2_pickinfo_1">領貨人資訊同會員資訊</label>
                 <div class="cart2_pickinfo">
                     <label for="cart2_pickinfo_name">姓名
                         <input type="text" name="" id="cart2_pickinfo_name">
@@ -86,14 +88,16 @@
         <div class="cart2_bright">
             <h4>其他</h4>
             <div class="cart2_main_margin">
-                <input type="checkbox" name="" id="">透過信箱得知訂單狀況
+                <input type="checkbox" name="" id="cart2_other_1"><label for="cart2_other_1">透過信箱得知訂單狀況</label>
                 <br>
-                <input type="checkbox" name="" id="">雲端發票
+                <input type="checkbox" name="" id="cart2_other_2"><label for="cart2_other_2">雲端發票</label>
+                <input type="text" name="" id="cart2_other_2">
                 <br>
-                <input type="checkbox" name="" id="">統編
+                <input type="checkbox" name="" id="cart2_other_3"><label for="cart2_other_3">統編</label>
+                <input type="text" name="" id="cart2_other_3">
                 <br>
-                <label for="">訂單備註</label>
-                <input type="text">
+                <label for="cart2_other_4">訂單備註</label>
+                <input type="text" id="cart2_other_4">
             </div>
             <a href="cart_3.html"><input type="submit" value="提交訂單" class="button"></a>
         </div>

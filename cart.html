@@ -9,29 +9,31 @@
     <title>百日花藝-購物車</title>
 </head>
 <body>
-    <nav><!-- 導覽列 -->
-        <ul>
-            <li><a href="index.html"><img src='./img/logo.png' alt=""></a></li>
-            <li><a href="news.html">花藝情報</a></li>
-            <li><a href="identify.html">認識花材</a></li>
-            <li><a href="product.html">商品</a>
-                <ol>
-                    <li><a href="product.html">最新商品</a></li>
-                    <li><a href="product.html">花圈</a></li>
-                    <li><a href="product.html">盆花</a></li>
-                    <li><a href="product.html">瓶插花</a></li>
-                    <li><a href="product.html">花束</a></li>
-                </ol>
-            </li>
-            <li><a href="order.html">訂做商品</a></li>
-        </ul>
+    <header><!-- 導覽列 -->
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src='./img/logo.png' alt=""></a></li>
+                <li><a href="news.html">花藝情報</a></li>
+                <li><a href="identify.html">認識花材</a></li>
+                <li><a href="product.html">商品</a>
+                    <ol>
+                        <li><a href="product.html">最新商品</a></li>
+                        <li><a href="product.html">花圈</a></li>
+                        <li><a href="product.html">盆花</a></li>
+                        <li><a href="product.html">瓶插花</a></li>
+                        <li><a href="product.html">花束</a></li>
+                    </ol>
+                </li>
+                <li><a href="order.html">訂做商品</a></li>
+            </ul>
+        </nav>
         <ul class="nav_icon">
             <li class="nav_icon1"><input type="text" placeholder="想要什麼商品？"><a href="#"></a></li>
             <li class="nav_icon2"><a href="#"></a></li>
             <li class="nav_icon3"><a href="cart.html"></a></li>
             <li class="nav_icon4"><a href="#"></a></li>
         </ul>
-    </nav>
+    </header>
 
     <main class="main_block cart_main">
         <div class="cart_top"><!-- 上方 -->
@@ -65,9 +67,9 @@
         </div>
         <div class="cart_left"><!-- 左下 -->
             <h4>配送方式</h4>
-            <input type="radio" name="cart_delive" id="">自取
+            <input type="radio" name="cart_delive" id="cart_delive_self"><label for="cart_delive_self">自取</label>
             <br>
-            <input type="radio" name="cart_delive" id="">宅配
+            <input type="radio" name="cart_delive" id="cart_delive_home"><label for="cart_delive_home">宅配</label>
             <span>運費100元</span>
             <input type="text" name="" id="" placeholder="請輸入地址">
         </div>
