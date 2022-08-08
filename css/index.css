@@ -1,6 +1,12 @@
 @import url('basic_settings.css');
 
-/* ---------------------內容--------------------- */
+/* news */
+header nav ul li:nth-child(1) a{
+    color: #6D6D6D;
+    /* text-shadow: 3px 3px 2px #BDE0CE; */
+}
+
+/* ---------------------首頁--------------------- */
 /* -----------banner--------- */
 .main_banner{
     margin-top: 70px;
@@ -21,6 +27,7 @@
     text-align: center;
     font-size: 48px;
     letter-spacing: 5px;
+    user-select: none;
 }
 
 @media screen and (max-width: 1190px){
@@ -263,6 +270,7 @@
     line-height: 70px;
     color: #6D6D6D;
     font-size: 20px;
+    user-select: none;
     
     position: absolute;
     bottom: 0;
@@ -294,7 +302,7 @@
     background-image: url(../img/index_works2.jpg);
 }
 .index_works3{
-    background-image: url(../img/index_works1.jpg);
+    background-image: url(../img/index_works3_3.jpg);
 }
 
 @media screen and (max-width: 1190px) {
@@ -331,11 +339,13 @@
     width: 13%;
     line-height: 394px;
     text-align: center;
+    user-select: none;
 }
 
 .index_works1_open_img > div{
     width: 100%;
     text-align: center;
+    user-select: none;
 }
 
 .index_works1_open_img > div a{
@@ -371,6 +381,7 @@
     text-align: center;
     line-height: 9px;
     border-radius: 2px;
+    user-select: none;
     
     position: absolute;
     right: 10px;

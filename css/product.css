@@ -1,7 +1,7 @@
 @import url('basic_settings.css');
 
 /* product */
-header nav ul li:nth-child(3) > a{
+header nav ul li:nth-child(4) > a{
     color: #6D6D6D;
     /* text-shadow: 3px 3px 2px #BDE0CE; */
 }
@@ -41,6 +41,7 @@ header nav ul li:nth-child(3) > a{
     position: absolute;
     width: auto;
     letter-spacing: 2px;
+    user-select: none;
 }
 
 .product_banner h1:nth-of-type(1){
@@ -151,6 +152,7 @@ header nav ul li:nth-child(3) > a{
 .product_list li img{
     width: 250px;
     object-fit: cover;
+    user-select: none;
 }
 
 .product_list li h4, .product_list li p{
@@ -175,6 +177,7 @@ header nav ul li:nth-child(3) > a{
 .product_list li button{
     opacity: 0;
     margin: auto 5px;
+    user-select: none;
     transition: all .4s;
 }
 

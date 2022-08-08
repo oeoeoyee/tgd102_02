@@ -19,7 +19,7 @@
 //     }
 // }
 
-//選擇商品種類
+//==========================選擇商品種類=====================//
 //選擇商品種類-監聽按鈕
 const kind = document.getElementsByClassName("js_choose_kind");
 for(let i = 0; i < kind.length; i++){
@@ -34,7 +34,7 @@ function choosed_kind(e){
 }
 
 
-//選擇花材
+//==========================選擇花材=====================//
 const choose_pic = document.getElementsByClassName("order_choose_pic")[0].querySelectorAll("div");
 
 for(let i = 0; i < choose_pic.length; i++){
@@ -42,12 +42,12 @@ for(let i = 0; i < choose_pic.length; i++){
     // const result_del_word = e.target.closest("div").querySelector("h6").innerText;
     choose_pic[i].addEventListener("click", function(e){
         //選擇花材-生出數字(上限十)
+        // const count = e.target.closest("div").querySelector("div");
+        // console.log(count);
+        // count.classList.add("choose_count");
+        // let count_num = count.innerText;
+        // count_num = count_num + 1;
 
-        const count = e.target.closest("div").querySelector("div");
-        console.log(count);
-        count.classList.add("choose_count");
-        let count_num = count.innerText;
-        count_num = count_num + 1;
         // count = count + 1;
         // let count = ;
         // innerText
@@ -55,16 +55,28 @@ for(let i = 0; i < choose_pic.length; i++){
         // e.target.insertAdjacentHTML("beforebegin", pic_count);
         //加上上限十
 
+        // 數量上限十
+        // result_count = 目前已選擇的花材數量
+        const result_count = document.getElementsByClassName("order_choose_result")[0].querySelectorAll("div").length;
+        if(result_count >= 10){
+            alert("超過花材數量上限！");
+        }else{
+            choose();
+        }
+
         //選擇花材-結果處生出按鈕
-        let choose_result = document.getElementsByClassName("order_choose_result")[0];
-        let result_tag_word = e.target.parentElement.querySelector("p").innerText;
-        let result_tag = `<div>
-                            <p>${result_tag_word}</p>
-                            <a><i class="fa-regular fa-circle-xmark js_choose_result_del"></i></a>
-                        </div>`
-        choose_result.insertAdjacentHTML("beforeend", result_tag);                  
+        function choose(){
+            let choose_result = document.getElementsByClassName("order_choose_result")[0];
+            let result_tag_word = e.target.parentElement.querySelector("p").innerText;
+            let result_tag = `<div>
+                                <p>${result_tag_word}</p>
+                                <a><i class="fa-regular fa-circle-xmark js_choose_result_del"></i></a>
+                            </div>`
+            choose_result.insertAdjacentHTML("beforeend", result_tag);
+        }
     });
 }
+
 
 //移除花材
 const choose_result = document.getElementsByClassName("order_choose_result")[0];
@@ -75,15 +87,17 @@ choose_result.addEventListener("click", function(e){
             this.closest("div").remove();
         });
     }
-    // console.log(e.target);
-    const result_del_word = e.target.closest("div").querySelector("h6").innerText;
-    const result_tag_pic = choose_result.previousElementSibling.querySelectorAll("p");
-    for(let i = 0; i < result_tag_pic.length; i++){
-        if(result_tag_pic[i].innerText === result_del_word){
-            console.log(result_tag_pic[i].innerText);
+    
+    //result_del_word = 按鈕裡的字(哪種花)
+    // const result_del_word = e.target.closest("div").querySelector("p").innerText;
+    //result_tag_pic = 圖片區的花材名稱(陣列)
+    // const result_tag_pic = choose_result.previousElementSibling.querySelectorAll("p");
+    // for(let i = 0; i < result_tag_pic.length; i++){
+    //     if(result_tag_pic[i].innerText === result_del_word){
+    //         console.log(result_tag_pic[i].innerText);
             
-        }else{}
-    }
+    //     }else{}
+    // }
 
     // let pic_count = `<div>${count}</div>`;
     // choose_pic.querySelector("span").insertAdjacentHTML("beforebegin", pic_count)

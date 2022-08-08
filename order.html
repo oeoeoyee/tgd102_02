@@ -14,10 +14,10 @@
         <nav>
             <a href="index.html"><img src='./img/logo.png' alt=""></a>
             <ul class="header_nav">
+                <li><a href="index.html">首頁</a></li>
                 <li><a href="news.html">花藝情報</a></li>
                 <li><a href="identify.html">認識花材</a></li>
-                <li class="js_product js_ol_open">
-                    <a href="product.html">百日商品</a>
+                <li class="js_product js_ol_open"><a>百日商品</a>
                     <ol class="js_product_ol">
                         <li><a href="product.html">最新商品</a></li>
                         <li><a href="product.html">花圈</a></li>
@@ -37,7 +37,6 @@
             <li class="nav_icon4"><a href="#" class="js_changeicon"></a></li>
         </ul>
     </header>
-
     <main class="main_block order_main"><!-- 主要內容 -->
         <div class="order_banner">
             <h1>訂做商品</h1>
@@ -52,15 +51,16 @@
            <h6 class="js_choose_kind">瓶插花</h6>
            <h6 class="js_choose_kind">花束</h6>
             <h4>選擇花材：</h4>
+            <p>請選擇至多十個花材(不限花種)！</p>
             <div class="order_choose_pic">
-                <div>
+                <div class="choose_disable">
                     <picture>
                         <source srcset="./img/order_choose_pic_11_min.jpg" media="(max-width: 1190px)">
                         <img src="./img/order_choose_pic_11.jpg" alt="">
                     </picture>
                     <p class="choose_this">風信子</p>
                     <div class=""></div>
-                    <span>+</span>
+                    <span>無法選取</span>
                 </div>
                 <div>
                     <picture>
@@ -98,14 +98,14 @@
                     <p>卡斯比亞</p> 
                     <span>+</span>
                 </div>
-                <div class="choose_disable">
+                <div>
                     <picture>
                         <source srcset="./img/order_choose_pic_10_min.jpg" media="(max-width: 1190px)">
                         <img src="./img/order_choose_pic_10.jpg" alt="">
                     </picture>
                     <div class=""></div>
                     <p>西洋水仙</p>
-                    <span>無法選取</span>
+                    <span>+</span>
                 </div>
                 <div>
                     <picture>
@@ -255,7 +255,7 @@
     </footer>  
     
     <script src="./js/basic_set.js"></script>
-    <!-- <script src="./js/order.js"></script> -->
+    <script src="./js/order.js"></script>
 
     <script>
         document.addEventListener("click", function(e){

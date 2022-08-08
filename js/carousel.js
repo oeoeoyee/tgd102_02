@@ -18,7 +18,6 @@ var showCurrent = function(){
         el.classList.remove('js_show'); // 將所有 img 的 class="show" 移除
     });
     slide_dot[itemToShow].classList.add('js_show'); //將要顯示的img加上"show"的class
-
 };
 
 function showNext(){

@@ -247,13 +247,17 @@ ul.header_nav{
     font-size: 24px;
 }
 
+.header_nav > li:nth-of-type(1){
+    display: none;
+}
+
 
 /* --子選單-- */
-.header_nav > li:nth-of-type(3){
+.header_nav > li:nth-of-type(4){
     position: relative;
 }
 
-.header_nav li:nth-of-type(3) ol{
+.header_nav li:nth-of-type(4) ol{
     width: 100%;
     text-align: center;
     display: flex;
@@ -264,14 +268,15 @@ ul.header_nav{
     top: 89px;
     transform: translate(-10px);
     z-index: 1;
+    box-shadow: rgba(0, 0, 0, .3) 1px 1px 2px;
 }
 
-.header_nav li:nth-of-type(3) ol li{    
+.header_nav li:nth-of-type(4) ol li{    
     padding: 5px 10px;
     background-color: #fff;
 }
 
-.header_nav li:nth-of-type(3) ol li a{
+.header_nav li:nth-of-type(4) ol li a{
     line-height: 50px;  
     font-size: 22px;
     width: 100%;
@@ -279,7 +284,7 @@ ul.header_nav{
 }
 
 /* --hover-- */
-.header_nav li:nth-child(3):hover ol{
+.header_nav li:nth-child(4):hover ol{
     display: block;    
 }
 
@@ -288,12 +293,12 @@ ul.header_nav{
     text-shadow: 3px 3px 2px #BDE0CE;
 }
 
-.header_nav:nth-of-type(3) li ol a:hover{
+.header_nav:nth-of-type(4) li ol a:hover{
     color: #6D6D6D;
     text-shadow: 3px 3px 2px #BDE0CE;
 }
 
-.header_nav li:nth-child(3) ol:hover li{
+.header_nav li:nth-child(4) ol:hover li{
     color: #000
 }
 
@@ -389,19 +394,24 @@ ul.header_nav{
         border-bottom: 1px dashed #BDE0CE;
     }
 
-    .header_nav li:nth-of-type(3) ol{
+    .header_nav > li:nth-of-type(1){
+        display: block;
+    }
+
+    .header_nav li:nth-of-type(4) ol{
         text-align: center;
+        box-shadow: none;
         position: static;
         top : 0;
         transform: none;
         display: none;
     }
 
-    .header_nav li:nth-of-type(3) ol li{
+    .header_nav li:nth-of-type(4) ol li{
         padding: 0;
     }
 
-    .header_nav li:nth-of-type(3) ol li a{
+    .header_nav li:nth-of-type(4) ol li a{
         line-height: 4.5rem;  
         font-size: 2rem;
         display: block;
