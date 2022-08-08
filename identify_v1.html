@@ -11,12 +11,12 @@
 <body>
     <header><!-- 導覽列 -->
         <nav>
-            <a href="index.html"><img src='./img/logo.png' alt=""></a>
-            <ul class="header_nav">
+            <ul>
+                <li><a href="index.html"><img src='./img/logo.png' alt=""></a></li>
                 <li><a href="news.html">花藝情報</a></li>
                 <li><a href="identify.html">認識花材</a></li>
-                <li class="js_product js_ol_open"><a href="product.html">百日商品</a>
-                    <ol class="js_product_ol">
+                <li><a href="product.html">商品</a>
+                    <ol>
                         <li><a href="product.html">最新商品</a></li>
                         <li><a href="product.html">花圈</a></li>
                         <li><a href="product.html">盆花</a></li>
@@ -25,48 +25,20 @@
                     </ol>
                 </li>
                 <li><a href="order.html">訂做商品</a></li>
-                <li class="nav_icon4"><a href="#"></a></li>
             </ul>
         </nav>
-        <ul class="header_icon">
+        <ul class="nav_icon">
             <li class="nav_icon1"><input type="text" placeholder="想要什麼商品？"><a href="#"></a></li>
             <li class="nav_icon2"><a href="#"></a></li>
             <li class="nav_icon3"><a href="cart.html"></a></li>
-            <li class="nav_icon4"><a href="#" class="js_changeicon"></a></li>
+            <li class="nav_icon4"><a href="#"></a></li>
         </ul>
     </header>
-
-    <main><!-- 介紹花材 -->
+<!-- class "identify" "identify2"是第一次寫用的 -->
+    <main>
         <div class="identify_main main_block">
             <h1>花材介紹</h1>
-            <img src="img/identify_icon.png" alt=""><!-- 溫馨提醒 -->
-            <h6>以下搭配選材僅供參考。<br>請依照自身的眼光和喜好來搭配，做出獨一無二的花束！</h6>
-            <div class="identify">
-                <h2>桔梗</h2>
-                <div class="identify_img">
-                    <img src="img/identify_img1.jpg" alt="">
-                </div>
-                <div class="identify_word">
-                    <div>
-                        <h4>簡介</h4>
-                        <h6>桔梗柔美不高調的花瓣，讓它作為一束花的主角時顯得有氣質，作為配角時又不會搶風采，是個很適當的點綴。桔梗的用途多，價格又不算貴，因此經常被運用在花藝作品中。</h6>
-                    </div>
-                    <div>
-                        <h4>搭配選材</h4>
-                        <h6>白色桔梗可以搭配其他色彩鮮明的花，平衡一束花中的色彩；作為主角時可搭配綠色葉材。</h6>
-                    </div>
-                    
-                    <div  class="identify_advise">
-                        <h4>相關商品推薦</h4>
-                        <div class="identify_advise_img">
-                            <a href="product_1.html"><span></span></a>
-                            <a href="product_1.html"><span></span></a>
-                            <a href="product_1.html"><span></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-            <!-- <ul class="identify identify1">
+            <ul class="identify identify1">
                 <li class="identify1_main">
                     <img src="img/identify_img1.jpg" alt="">
                     <div class="identify1_main_word">
@@ -99,8 +71,9 @@
                         <h6>白色桔梗可以搭配其他色彩鮮明的花，平衡一束花中的色彩；作為主角時可搭配綠色葉材。</h6>
                     </div>
                 </li>
-            </ul>   -->
-             
+            </ul>  
+             <img src="img/identify_icon.png" alt="">
+             <h6>以上搭配選材僅供參考。<br>請依照自身的眼光和喜好來搭配，做出獨一無二的花束！</h6>
         </div>        
     </main>
 
@@ -122,7 +95,5 @@
         <p>本網站為緯育TibaMe前端工程師班第78期學員專題作品，本平台僅供學習、展示之用。</p>
         <a href="resource.html">參考資源</a>
     </footer>
-
-    <script src="./js/basic_set.js"></script>
 </body>
 </html>

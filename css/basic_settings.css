@@ -1,5 +1,10 @@
 @import url('reset.css');
-/* @import url('rwd.css'); */
+
+@media screen and (max-width: 1190px){
+    html{
+        font-size: 62.5%;
+    }
+}
 
 body{
     background-color: #fff;
@@ -7,9 +12,22 @@ body{
     box-sizing: border-box;
 }
 
+@media screen and (max-width: 1190px){
+    body{
+        font-family: "微軟正黑體", serif, arial;
+    }
+}
+
 .main_block{
     width: 1190px;
     margin: 120px auto 0;
+}
+
+@media screen and (max-width: 1190px) {
+    .main_block{
+        width: 95%;
+        margin: 0 auto;
+    }
 }
 
 /* --普通黃色按鈕-- */
@@ -22,6 +40,22 @@ body{
     background-color: #F4E2A6;
     border: none;
     padding: 1px 6px;
+}
+
+.button:hover{
+    box-shadow: 0 0 4px #F4E2A6;
+    transition: all .1s;
+}
+
+.button:active{
+    transform: scale(.9);
+    transition: all .3s;
+}
+
+@media screen and (max-width: 1190px) {
+    .button{
+        color: black;
+    }
 }
 
 /* --加減數字按鈕-- */
@@ -53,6 +87,16 @@ body{
     border-radius: 2px;
 }
 
+@media screen and (max-width: 1190px) {
+    .num_botton input{
+    }
+    
+    .num_botton input:nth-of-type(1), .num_botton input:nth-of-type(3){
+        color: black;
+        text-align: center;;
+    }
+}
+
 /* --左右箭頭按鈕-- */
 .arrow_button{
     position: absolute;
@@ -77,6 +121,7 @@ input{
 a{
     text-decoration: none;
     color: #000;
+    cursor: pointer;
 }
 h1{
     font-size: 30px;
@@ -85,6 +130,7 @@ h1{
     text-align: center;
     margin-bottom: 60px;
 }
+
 h2{
     font-size: 28px;
 }
@@ -106,38 +152,50 @@ p{
     line-height: 20px;
 }
 
-/* --nav變色-- */
-/* news */
-/* header nav ul li:nth-child(2) a{
-    color: #6D6D6D;
-    text-shadow: 3px 3px 2px #BDE0CE;
-} */
+@media screen and (max-width: 1190px){
+    input{
+        font-family: '微軟正黑體', Arial;
+        font-size: 13px;
+        padding: 3px;
+        border-radius: 2px;
+    }
 
-/* identify */
-/* header nav ul li:nth-child(3) a{
-    color: #6D6D6D;
-    text-shadow: 3px 3px 2px #BDE0CE;
-} */
+    h1{
+        font-size: 3rem;
+        line-height: 50px;
+        margin: 30px auto 15px;
+    }
 
-/* product */
-/* header nav ul li:nth-child(4) a{
-    color: #6D6D6D;
-    text-shadow: 3px 3px 2px #BDE0CE;
-} */
+    h2{
+        font-size: 2.4rem;
+    }
+
+    h3{
+        font-size: 2.2rem;
+    }
+
+    h4{
+        font-size: 2.2rem;
+    }
+
+    h5{
+        font-size: 1.8rem;
+    }
+
+    h6{
+        font-size: 1.6rem;
+    }
+
+    p{
+        font-size: 1.4rem;
+        line-height: 1.6em;
+    }
+}
 
 header nav ul li:nth-child(4) ol a{
     color: #000;
     text-shadow: none;
 }
-
-/* order */
-/* header nav ul li:nth-child(5) a{
-    color: #6D6D6D;
-    text-shadow: 3px 3px 2px #BDE0CE;
-} */
-
-/* cart
-nav ul:last-of-type li:nth-child(3) a{} */
 
 /* ---------------------導覽列--------------------- */
 /* search框框對齊不上去 */
@@ -153,74 +211,102 @@ header{
     position: fixed;
     z-index: 3;
     top: 0;
+    /* position: static; */
+
+    transition: all 1s;
 }
 
-header ul{
+header nav{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+header nav > a{
+    display: inline-block;
+    height: 70px;
+    padding: 10px auto;
+}
+
+header nav > a img{
+    height: 100%;
+}
+
+ul.header_nav{
     display: flex;
     padding: 0 10px;
-}
-
-header nav ul{
+    height: 100%;
+    text-align: center;
     margin-right: 10px;
+
 }
 
-header ul li{
+.header_nav li{
     padding: 10px 10px;
     line-height: 70px;
     font-size: 24px;
 }
 
-header nav ul:first-of-type img{
-    height: 70px;
-}
 
 /* --子選單-- */
-header nav ul > li:nth-of-type(4){
+.header_nav > li:nth-of-type(3){
     position: relative;
 }
 
-header nav ul li:nth-of-type(4) ol{
-    width: 105px;
+.header_nav li:nth-of-type(3) ol{
+    width: 100%;
     text-align: center;
-    /* display: flex; */
+    display: flex;
+    flex-direction: column;
     display: none;
 
     position: absolute;
     top: 89px;
-    transform: translate(-25%);
+    transform: translate(-10px);
     z-index: 1;
 }
 
-header nav ul li:nth-of-type(4) ol li{    
-    padding: 0;
+.header_nav li:nth-of-type(3) ol li{    
+    padding: 5px 10px;
     background-color: #fff;
 }
 
-header nav ul li:nth-of-type(4) ol li a{
+.header_nav li:nth-of-type(3) ol li a{
     line-height: 50px;  
-    font-size: 20px;
-    /* text-indent: 0.5em; */
+    font-size: 22px;
     width: 100%;
     display: block;
 }
 
 /* --hover-- */
-header nav ul li:nth-child(4):hover ol{
+.header_nav li:nth-child(3):hover ol{
     display: block;    
 }
 
-header nav ul li:hover > a{
+.header_nav li:hover > a{
     color: #6D6D6D;
     text-shadow: 3px 3px 2px #BDE0CE;
 }
 
-header nav ul li:nth-child(4) ol a:hover{
+.header_nav li:nth-child(3) ol a:hover{
     color: #6D6D6D;
     text-shadow: 3px 3px 2px #BDE0CE;
 }
+
 
 /* --右側icon-- */
-.nav_icon input{
+.header_icon{
+    display: flex;
+    padding: 0 10px;
+}
+
+.header_icon li{
+    padding: 10px 10px;
+    line-height: 70px;
+    font-size: 24px;
+}
+
+.header_icon input{
     display: none;
     width: 300px;
     height: 25px;
@@ -230,9 +316,10 @@ header nav ul li:nth-child(4) ol a:hover{
 
 .nav_icon1:hover input{
     display: inline-block;
+    /* display: none; */
 }
 
-.nav_icon a{
+.header_icon a{
     background-image: url('..//img/nav_icon.png');
     background-size: cover;
     display: inline-block;
@@ -244,13 +331,111 @@ header nav ul li:nth-child(4) ol a:hover{
     background-position: 0 0;
 }
 .nav_icon2 a{
-    background-position: -20px 0;
+    background-position: -22px 0;
 }
 .nav_icon3 a{
-    background-position: -40px 0;
+    background-position: -43px 0;
 }
 .nav_icon4 a{
-    background-position: -60px 0;
+    background-position: -64px 0;
+}
+
+/* js 導覽列上滑 */
+.-headup{
+    transform: translateY(-90px);
+}
+
+.-headdown{
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 1190px) {
+    header{
+        height: 70px;
+        position: relative;
+    }
+
+    header nav{
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 0;
+    }
+
+    header nav > a{
+        height: 60px;
+        padding: 5px;
+    }
+
+    ul.header_nav{
+        background-color: #fff;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        margin-right: 0;
+        padding: 0;
+        display: none;
+
+        position: absolute;
+        top: 70px;
+    }
+
+    .header_nav li{
+        padding: 0 0;
+        line-height: 6rem;
+        font-size: 2.0rem;
+    }
+
+    .header_nav li:nth-of-type(3) ol{
+        text-align: center;
+        position: static;
+        top : 0;
+        transform: none;
+        display: none;
+    }
+
+    .header_nav li:nth-of-type(3) ol li{
+        padding: 0;
+    }
+
+    .header_nav li:nth-of-type(3) ol li a{
+        line-height: 4.5rem;  
+        font-size: 2rem;
+        display: block;
+    }
+
+    .header_nav .nav_icon4 a{
+        background-image: url('..//img/nav_icon.png');
+        background-size: cover;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+    }
+
+    header .header_icon li{
+        padding: 10px 10px;
+        line-height: 50px;
+        font-size: 24px;
+    }
+
+    .nav_icon1:hover input{
+        display: inline-block;
+        width: 150px;
+        height: 40px;
+        /* display: none; */
+    }
+
+    .header_icon .nav_icon4 a{
+        background-position: -87px 0;
+        /* background-position: -107px 0; 叉叉的位置 */
+    }
+
+    .js_changeicon a{
+        background-position: -107px 0;
+    }
+
+    .-headup{
+        transform: translateY(-70px);
+    }
 }
 
 /* ---------------------footer--------------------- */
@@ -328,4 +513,45 @@ footer p{
 footer > a{
     margin-bottom: 20px;
     text-decoration: underline;
+}
+
+/* -----------------螢幕小於414時------------------- */
+@media screen and (max-width: 1190px){
+
+
+    footer ul{
+        flex-wrap: wrap;
+    }
+
+    footer li{
+        width: 100%;
+        height: 80px;
+    }
+
+    footer li:nth-child(2){
+        width: 100%;
+        background-color: #BDE0CE;
+    }
+
+    footer li h6{
+        line-height: 2.5rem;
+    }
+
+    footer h6{
+        font-size: 1.4rem;
+    }
+
+    footer li a{
+        margin: 5px 10px;
+    }
+
+    footer p{
+        line-height: 20px;
+        margin-bottom: 5px;
+    }
+
+    footer > a{
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
 }

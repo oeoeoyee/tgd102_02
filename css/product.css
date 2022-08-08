@@ -15,6 +15,12 @@ header nav ul li:nth-child(4) a{
     justify-content: space-between;
 }
 
+@media screen and (max-width: 1190px) {
+    .product_main{
+        margin-bottom: 0;
+    }
+}
+
 .product_banner{
     width: 100%;
     margin-bottom: 60px;
@@ -47,13 +53,46 @@ header nav ul li:nth-child(4) a{
     top: 50%;
 }
 
+
+@media screen and (max-width: 1190px) {
+    .product_banner{
+        margin-bottom: 30px;
+    }
+
+    .product_banner img{
+        width: 180px;
+        height: 180px;
+        margin: 20px;
+    }
+
+    .product_banner h1{
+        font-size: 3.5em;
+        position: absolute;
+        text-align: right;
+        letter-spacing: 1px;
+        font-family: 'Kiwi Maru';
+        font-weight: normal;
+    }
+
+    .product_banner h1:nth-of-type(1){
+        right: 20%;
+        top: 0;
+        font-size: 3em;
+    }
+
+    .product_banner h1:nth-of-type(2){
+        right: 7%;
+        top: 20%;
+        font-size: 3em;
+    }
+}
+
 /* --左側導覽-- */
 .product_nav{
     width: 15%;
     height: 400px;
     display: inline-block;
     border: #BDE0CE 3px solid;
-    border-radius: 5px;
 
     margin-left: 60px;
 
@@ -88,6 +127,12 @@ header nav ul li:nth-child(4) a{
     z-index: -1;
 }
 
+@media screen and (max-width: 1190px) {
+    .product_nav{
+        display: none;
+    }
+}
+
 /* --商品照列-- */
 .product_list{
     width: 78%;
@@ -105,27 +150,29 @@ header nav ul li:nth-child(4) a{
 
 .product_list li img{
     width: 250px;
-    height: 250px;
+    /* height: 250px; */
     object-fit: cover;
-    border-radius: 5px;
 }
 
 .product_list li h4, .product_list li p{
     margin-top: 7px;
 }
 
-/* 可以hover圖片再跑button出來就好嗎 */
 .product_list li:hover button{
-    display: block;
+    /* display: block; */
+    opacity: 1;
+    transition: all .4s;
 }
 
 .product_list li button{
-    display: none;
+    /* display: none; */
+    opacity: 0;
 
     position: absolute;
     top: 0;
     bottom: 0;
     margin: auto;
+    transition: all .4s;
 }
 
 .product_list li button:first-of-type{
@@ -139,6 +186,22 @@ header nav ul li:nth-child(4) a{
 .product_list li button:last-of-type{
     width: 60px;
     right: 72px;
+}
+
+@media screen and (max-width: 1190px) {
+    .product_list{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .product_list li{
+        width: 48%;
+        margin: 5px 3px 5px;
+    }
+
+    .product_list li img{
+        width: 100%;
+    }
 }
 
 /* ---------------------商品頁1--------------------- */
@@ -194,7 +257,6 @@ header nav ul li:nth-child(4) a{
     margin-top: 90px;
 }
 
-/* 對齊 不能 */
 .product1_top_word_warn{
     height: 24px;
 }
@@ -209,15 +271,75 @@ header nav ul li:nth-child(4) a{
 .product1_top_word_warn p{
     display: inline-block;
     line-height: 24px;
+    margin-bottom: 20px;
 }
 
 .product1_top_word_num{
-    margin: 200px 0 30px 0;
+    margin: 200px 0 50px 0;
 }
 
 
 .product1_top_word button{
     margin-right: 5px;
+}
+
+@media screen and (max-width: 1190px) {
+    .product1_main{
+        margin-top: 30px;
+    }
+
+    .product1_top{
+        flex-direction: column;
+    }
+
+    .product1_top_imgs{
+        order: 2;
+        flex-direction: row;
+        justify-content: start;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+    
+    .product1_top > img{
+        order: 1;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .product1_top_word{
+        order: 3;
+        margin-left: 0;
+    }
+
+    .product1_top .product1_top_imgs img{
+        width: 30%;
+        margin-right: 5px;
+    }
+
+    .product1_top_word h1:first-of-type{
+        margin-top: 20px;
+    }
+
+    .product1_top_word h1{
+        margin-top: 0px;
+    }
+
+    .product1_top_word p{
+        margin-bottom: 5px;
+    }
+
+    .product1_top_word_num{
+        margin: 100px 0 10px 0;
+    }
+
+    .product1_main .product1_top ~ h1{
+        margin: 30px 0 10px 0;
+        /* 同層級會選不到嗎 */
+    }
+
+    .product1_main > p{
+        margin-left: 0;
+    }
 }
 
 /* --下方文字-- */
@@ -243,7 +365,7 @@ header nav ul li:nth-child(4) a{
 
 .product1_recommend li img{
     width: 220px;
-    height: 220px;
+    /* height: 220px; */
 }
 
 .product1_recommend li button:first-of-type{
@@ -257,4 +379,15 @@ header nav ul li:nth-child(4) a{
     width: 60px;
     right: 60px;
     top: -30px;
+}
+
+@media screen and (max-width: 1190px) {
+    .product1_recommend{
+        margin: 0 auto 30px;
+        width: 100%;
+    }
+    
+    .product1_recommend li img{
+        width: 100%;
+    }
 }

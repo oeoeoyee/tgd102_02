@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/news.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet">
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/news.css">
     <title>百日花藝-花藝情報</title>
 </head>
 <body>
     <header><!-- 導覽列 -->
         <nav>
-            <ul>
-                <li><a href="index.html"><img src='./img/logo.png' alt=""></a></li>
+            <a href="index.html"><img src='./img/logo.png' alt=""></a>
+            <ul class="header_nav">
                 <li><a href="news.html">花藝情報</a></li>
                 <li><a href="identify.html">認識花材</a></li>
-                <li><a href="product.html">商品</a>
-                    <ol>
+                <li class="js_product js_ol_open"><a href="product.html">百日商品</a>
+                    <ol class="js_product_ol">
                         <li><a href="product.html">最新商品</a></li>
                         <li><a href="product.html">花圈</a></li>
                         <li><a href="product.html">盆花</a></li>
@@ -26,51 +28,77 @@
                     </ol>
                 </li>
                 <li><a href="order.html">訂做商品</a></li>
+                <li class="nav_icon4"><a href="#"></a></li>
             </ul>
         </nav>
-        <ul class="nav_icon">
+        <ul class="header_icon">
             <li class="nav_icon1"><input type="text" placeholder="想要什麼商品？"><a href="#"></a></li>
             <li class="nav_icon2"><a href="#"></a></li>
             <li class="nav_icon3"><a href="cart.html"></a></li>
-            <li class="nav_icon4"><a href="#"></a></li>
+            <li class="nav_icon4"><a href="#" class="js_changeicon"></a></li>
         </ul>
     </header>
 
     <main><!-- 主要內容 -->
-        
-        <ul class="main_block news_info"><!-- 花藝新聞資訊 -->
+
+        <!-- 花藝新聞資訊 -->
+        <div class="main_block">    
             <h1>Floral Information</h1>
-            <i class="fa-solid fa-chevron-left arrow_button"></i>
-            <i class="fa-solid fa-chevron-right arrow_button"></i>
-            <li>
-                <img src="img/news_info1.jpg" alt="">
-                <span>花藝布置</span>
-                <h4>婚禮瓶花新風格</h4>
-                <p>婚禮瓶花新風格......</p>
-            </li>
-            <li>
-                <img src="img/news_info2.jpg" alt="">
-                <span>購物消息</span>
-                <h4>百日新推出花籃</h4>
-                <p>百日花藝新推出......</p>
-            </li>
-            <li>
-                <img src="img/news_info3.jpg" alt="">
-                <span>購物消息</span>
-                <h4>受疫情影響花價下跌</h4>
-                <p>近期疫情嚴重，花......</p>
-            </li>
-            <div class="news_info_open">
-                <img src="img/news_info3.jpg" alt="">
-                <div>
-                    <button><i class="fa-regular fa-circle-xmark"></i></button>
-                    <h4>受疫情影響花價下跌</h4>
-                    <span>購物消息</span>
-                    <p>近期疫情嚴重，花市人潮減少，花價下跌，各地花農損失慘重。<br><br>許多實體花店的生意冷清，為了改善此情況，許多業者推出宅配方案或是線上購物的服務讓消費者在家不能出門也能享受花藝，一改以往到店購花選花的商業模式，讓客人有不同於以往的消費模式選擇。<br><br>百日花藝亦有推出花藝訂做服務，讓客人體驗自行搭配的樂趣，在線上即可預定且享有送到府的服務。</p>
+        <!-- Slider main container -->
+            <div class="news_info swiper">
+                <!-- set pic overflow hidden -->
+                <div class="news_info_swiper_hide swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="news_info_wrapper swiper-wrapper">
+                    <!-- Slides -->
+                        <div class="news_info_li swiper-slide">
+                            <img src="img/news_info1.jpg" alt="">
+                            <span class="news_info_li_iconb">花藝布置</span>
+                            <h4>婚禮瓶花新風格</h4>
+                            <p>婚禮瓶花新風格......</p>
+                        </div>
+                        <div class="news_info_li swiper-slide">
+                            <img src="img/news_info2.jpg" alt="">
+                            <span class="news_info_li_icony">百日商品</span>
+                            <h4>百日新推出花籃</h4>
+                            <p>百日花藝新推出......</p>
+                        </div>
+                        <div class="news_info_li swiper-slide">
+                            <img src="img/news_info3.jpg" alt="">
+                            <span class="news_info_li_icong">購物消息</span>
+                            <h4>受疫情影響花價下跌</h4>
+                            <p>近期疫情嚴重，花......</p>
+                        </div>
+                        <div class="news_info_li swiper-slide">
+                            <img src="img/news_info2.jpg" alt="">
+                            <span class="news_info_li_icony">百日商品</span>
+                            <h4>百日新推出花籃</h4>
+                            <p>百日花藝新推出......</p>
+                        </div>
+                    </div>
+                    <!-- 以下是打開後的資訊 -->
+                    <div class="-none js_lightbox" id="news_info_lightbox">
+                        <article class="news_info_open">
+                            <img src="img/news_info3.jpg" alt="">
+                            <div>
+                                <h4>受疫情影響花價下跌</h4>
+                                <span>購物消息</span>
+                                <p>近期疫情嚴重，花市人潮減少，花價下跌，各地花農損失慘重。<br><br>許多實體花店的生意冷清，為了改善此情況，許多業者推出宅配方案或是線上購物的服務讓消費者在家不能出門也能享受花藝，一改以往到店購花選花的商業模式，讓客人有不同於以往的消費模式選擇。<br><br>百日花藝亦有推出花藝訂做服務，讓客人體驗自行搭配的樂趣，在線上即可預定且享有送到府的服務。</p>
+                            </div>
+                            <button><i class="js_lightbox_btn fa-regular fa-circle-xmark"></i></button>
+                        </article>
+                    </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev">
+                    <i class="fa-solid fa-caret-left"></i>
+                </div>
+                <div class="swiper-button-next">
+                    <i class="fa-solid fa-caret-right"></i>
                 </div>
             </div>
-        </ul>
-
+            
+        </div>
         <h1>Floral Decoration</h1><!-- 花藝布置 -->
         <div class="main_block news_deco">
             <img src="img/news_deco1.jpg" alt="">
@@ -126,5 +154,145 @@
         <p>本網站為緯育TibaMe前端工程師班第78期學員專題作品，本平台僅供學習、展示之用。</p>
         <a href="resource.html">參考資源</a>
     </footer>
+
+    <script src="./js/basic_set.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        // news_info open + lightbox
+        // news_info open
+        document.addEventListener("click", function(e){
+            if(e.target.closest("div.news_info_li").classList.contains("news_info_li")){
+                let lightbox = document.getElementById("news_info_lightbox");
+                lightbox.classList.remove("-none");
+            }
+        });
+        
+        // news_info close
+        document.addEventListener("click", function(e){
+            let lightbox = document.getElementById("news_info_lightbox");
+            if(e.target.classList.contains("js_lightbox")){
+                lightbox.classList.add("-none");
+            }
+            if(e.target.classList.contains("js_lightbox_btn")){
+                lightbox.classList.add("-none");
+            }
+        });
+
+
+
+        //swiper
+        //swiper min-width_1190
+        window.addEventListener('load', rwd_1190);
+        function rwd_1190(){
+            if(window.outerWidth > 1190){
+                //swiper setting
+                const swiper = new Swiper('.swiper', {
+                    // Optional parameters
+                    // direction: 'vertical',
+                    loop: true,
+                    slidesPerView: 3,
+                    centeredSlides: true,
+                    spaceBetween: 30,
+                    autoplay: {
+                        delay: 4000,
+                        disableOnInteraction: false,
+                    },
+
+                    // Navigation arrows
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+            }
+        }
+
+        //swiper max-width_1190
+        window.addEventListener('load', rwd_414);
+        function rwd_414(){
+            if(window.outerWidth < 1190){
+                //swiper setting
+                const swiper = new Swiper('.swiper', {
+                    // Optional parameters
+                    // direction: 'vertical',
+                    loop: true,
+                    slidesPerView: 1.4,
+                    centeredSlides: true,
+                    spaceBetween: 30,
+                    autoplay: {
+                        delay: 4000,
+                        disableOnInteraction: false,
+                    },
+
+                    // Navigation arrows
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+            }
+        }
+
+
+        //swiper resize min-width_1190
+        window.addEventListener('resize', resize_1190up);
+        function resize_1190up(){
+            if(window.outerWidth > 1190){
+                // console.log(Swiper.slidesPerView);
+                // let slides_num = Swiper.slidesPerView;
+                // slides_num = 3;
+
+                // //swiper setting
+                const swiper = new Swiper('.swiper', {
+                    // Optional parameters
+                    // direction: 'vertical',
+                    loop: true,
+                    slidesPerView: 3,
+                    centeredSlides: true,
+                    spaceBetween: 30,
+                    autoplay: {
+                        delay: 4000,
+                        disableOnInteraction: false,
+                    },
+
+                    // Navigation arrows
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+            }
+        }
+
+        //swiper resize max-width_1190
+        window.addEventListener('resize', resize_414);
+        function resize_414(){
+            if(window.outerWidth < 1190){
+                //swiper setting
+                const swiper = new Swiper('.swiper', {
+                    // Optional parameters
+                    // direction: 'vertical',
+                    loop: true,
+                    slidesPerView: 1.4,
+                    centeredSlides: true,
+                    spaceBetween: 30,
+                    autoplay: {
+                        delay: 4000,
+                        disableOnInteraction: false,
+                    },
+
+                    // Navigation arrows
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+            }
+        }
+
+        
+
+    </script>
+    
 </body>
 </html>

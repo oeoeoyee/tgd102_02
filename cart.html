@@ -11,12 +11,12 @@
 <body>
     <header><!-- 導覽列 -->
         <nav>
-            <ul>
-                <li><a href="index.html"><img src='./img/logo.png' alt=""></a></li>
+            <a href="index.html"><img src='./img/logo.png' alt=""></a>
+            <ul class="header_nav">
                 <li><a href="news.html">花藝情報</a></li>
                 <li><a href="identify.html">認識花材</a></li>
-                <li><a href="product.html">商品</a>
-                    <ol>
+                <li class="js_product js_ol_open"><a href="product.html">百日商品</a>
+                    <ol class="js_product_ol">
                         <li><a href="product.html">最新商品</a></li>
                         <li><a href="product.html">花圈</a></li>
                         <li><a href="product.html">盆花</a></li>
@@ -25,13 +25,14 @@
                     </ol>
                 </li>
                 <li><a href="order.html">訂做商品</a></li>
+                <li class="nav_icon4"><a href="#"></a></li>
             </ul>
         </nav>
-        <ul class="nav_icon">
+        <ul class="header_icon">
             <li class="nav_icon1"><input type="text" placeholder="想要什麼商品？"><a href="#"></a></li>
             <li class="nav_icon2"><a href="#"></a></li>
             <li class="nav_icon3"><a href="cart.html"></a></li>
-            <li class="nav_icon4"><a href="#"></a></li>
+            <li class="nav_icon4"><a href="#" class="js_changeicon"></a></li>
         </ul>
     </header>
 
@@ -40,7 +41,7 @@
             <h6>STEP.1  >> <span>STEP.2  >> STEP.3</span></h6>
             <h6>需付款：NTD.</h6>
             <h4>訂單詳情</h4>
-            <table>
+            <!-- <table>
                 <thead>
                     <tr>
                         <th>商品</th>
@@ -63,17 +64,49 @@
                         <td>NTD.4400</td>
                     </tr>                    
                 </tbody>
+            </table> -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>商品</th>
+                        <th>詳細</th>
+                        <th>總價</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="./img/product_li_4.jpg" alt=""></td>
+                        <td><p>木瓶綠盆花</p><br>
+                            <p>NTD.2200</p><br>
+                            <select name="" id="">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2" selected>2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </td>
+                        </span>
+                        <td>NTD.4400</td>
+                    </tr>                    
+                </tbody>
             </table>
         </div>
         <div class="cart_left"><!-- 左下 -->
             <h4>配送方式</h4>
-            <input type="radio" name="cart_delive" id="cart_delive_self"><label for="cart_delive_self">自取</label>
+            <input type="radio" name="cart_delive" id="cart_delive_self" value="自取">自取
             <br>
-            <input type="radio" name="cart_delive" id="cart_delive_home"><label for="cart_delive_home">宅配</label>
+            <input type="radio" name="cart_delive" id="cart_delive_home" value="宅配">宅配
             <span>運費100元</span>
-            <input type="text" name="" id="" placeholder="請輸入地址">
+            <input type="text" name="" id="cart_delive_address" placeholder="請輸入地址">
         </div>
-        <div class="cart_right">
+        <div class="cart_right"><!-- 右下 -->
             <h4>小計</h4>
             <table>
                 <tbody>
@@ -96,7 +129,8 @@
                     </tr>
                 </tfoot>
             </table>
-            <a href="cart_2.html"><input type="submit" value="提交訂單" class="button"></a>
+            <a href="cart_2.html"><input type="submit" value="提交訂單" id="cart1_button"></a>
+            <!-- <a href="cart_2.html"><input type="submit" value="提交訂單" class="button" id="cart1_button"></a> -->
         </div>
     </main>
 
@@ -118,5 +152,7 @@
         <p>本網站為緯育TibaMe前端工程師班第78期學員專題作品，本平台僅供學習、展示之用。</p>
         <a href="resource.html">參考資源</a>
     </footer>
+
+    <script src="./js/basic_set.js"></script>
 </body>
 </html>

@@ -10,12 +10,24 @@ header nav ul li:nth-child(5) a{
 /* --上方-- */
 .order_main h1{
     text-align: left;
-    margin-left: 40px;
+    text-indent: 40px;
+    /* margin-left: 40px; */
+    /* 加margin會有橫向捲軸 */
     margin-bottom: 30px;
 }
 
+@media screen and (max-width: 1190px) {
+    .order_main h1{
+        text-indent: 0;
+    }
+
+    .order_main h4{
+        margin-left: 0;
+    }
+}
+
 .order_banner{
-    width: 100%;
+    /* width: 100%; */
     height: 440px;
     /* margin-bottom: 60px; */
 
@@ -49,7 +61,47 @@ header nav ul li:nth-child(5) a{
     top: 50%;
 }
 
-/* --選擇內容-- */
+@media screen and (max-width: 1190px) {
+    .order_banner{
+        height: 250px;
+        overflow: hidden;
+    }
+
+    .order_banner h1{
+        z-index: 1;
+        position: absolute;
+        font-size: 3em;
+        letter-spacing: normal;
+        font-family: 'Kiwi Maru';
+        font-weight: normal;
+    }
+
+    .order_banner h1:nth-of-type(1){
+        left: 20%;
+        top: 10%;
+        line-height: 0;
+    }
+
+    .order_banner h1:nth-of-type(2){
+        left: 10%;
+        top: 20%;
+        line-height: 1.5em;
+        width: 150px;
+    }
+
+    .order_banner img{
+        position: absolute;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 100%;
+        margin: 30px 0 auto 60px;
+        transform: rotate(20deg);
+    }
+}
+
+/* --選擇商品種類-- */
 .order_choose{
     width: 100%;
     margin-bottom: 60px;
@@ -62,25 +114,40 @@ header nav ul li:nth-child(5) a{
     margin-bottom: 10px;
 }
 
-.order_choose h6{
+.order_choose > h6{
     display: inline-block;
     border-radius: 5px;
     /* background-color: #D9D9D9; */
-    border: #F4E2A6 1.5px solid;
+    border: #BDE0CE 1.5px solid;
     background-color: #fff;
     padding: 0 10px;
     line-height: 35px;
     margin: 0 10px 0 0;
+    cursor: pointer;
 
-    /* 記得拿掉註解transition: all .5s; */
+    transition: all .3s;
+}
+
+.order_choose .js_choosed{
+    background-color: #BDE0CE;
 }
 
 .order_choose h6:hover{
-    background-color: #F4E2A6;
+    background-color: #DDF2E7;
 }
 
-.order_choose > a:first-of-type{
+.order_choose > h6:first-of-type{
     margin-left: 40px;
+}
+
+@media screen and (max-width: 1190px) {
+    .order_choose h4{
+        margin-left: 0;
+    }    
+    
+    .order_choose > h6:first-of-type{
+        margin-left: 0;
+    }
 }
 
 /* --選擇花材-- */
@@ -94,6 +161,7 @@ header nav ul li:nth-child(5) a{
 
 .order_choose_pic > div{
     position: relative;
+    transition: all .5s;
 }
 
 .order_choose_pic img{
@@ -101,153 +169,156 @@ header nav ul li:nth-child(5) a{
     display: block;
 }
 
+.choose_count{
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    background-color: #DDF2E7;
+    text-align: center;
+    font-size: 18px;
+    /* z-index: 1; */
+
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
 .order_choose_pic span{
-    display: none;
+    /* display: none; */
+    opacity: 0;
     width: 185px;
     height: 185px;
     background-color: rgb(0, 0, 0, .2);
-
-    position: absolute;
-    top: 0;
-    z-index: 1;
-}
-
-.order_choose_pic span p, .order_choose_pic span a{
+    color: #fff;
+    font-size: 40px;
     text-align: center;
-    line-height: 30px;
-}
-
-.order_choose_pic span p{
-    margin-top: 10%;
-    background-color: rgb(225, 225, 225, .7);
-}
-
-.order_choose_pic span a{
-    margin-top: 30%;
-    display: block;
-    background-color: rgb(244, 226, 166, .7);
-}
-
-.order_choose_pic div:nth-of-type(n):hover span{
-    display: block;
-}
-
-.order_choose button{
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
-/* .order_choose_pic{
-    position: relative;
-}
-
-.order_choose_pic > i{
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
-    line-height: 25px;
-}
-
-.order_choose_pic i:first-child{
-    margin-left: 40px;
-    left: -13px;
-}
-
-.order_choose_pic i:last-child{
-    right: 25px;
-}
-
-.order_choose_pic ul{
-    display: flex;
-    margin: 0 40px;
-    overflow: hidden;
-}
-
-.order_choose_pic li{
-    border: #fff 1px solid;
-    flex-shrink: 0;
-    display: inline-block;
-    width: 190px;
-    height: 190px;
-    margin: 0;
-    background-size: contain;
-
-    position: relative;
-}
-
-.order_choose_pic li:nth-of-type(1){
-    background-image: url("../img/order_choose_pic_2.jpg");
-}
-
-.order_choose_pic li:nth-of-type(2){
-    background-image: url("../img/order_choose_pic_3.jpg");
-}
-
-.order_choose_pic li:nth-of-type(3){
-    background-image: url("../img/order_choose_pic_4.jpg");
-}
-
-.order_choose_pic li:nth-of-type(4){
-    background-image: url("../img/order_choose_pic_5.jpg");
-}
-
-.order_choose_pic li:nth-of-type(5){
-    background-image: url("../img/order_choose_pic_6.jpg");
-}
-
-.order_choose_pic li:nth-of-type(6){
-    background-image: url("../img/order_choose_pic_1.jpg");
-}
-
-.order_choose_pic li:nth-of-type(7){
-    background-image: url("../img/order_choose_pic_2.jpg");
-}
-
-.order_choose_pic li span:nth-of-type(1){
-    position: absolute;
-    font-size: 15px;
+    line-height: 185px;
     font-weight: lighter;
-    background-color: rgb(0, 0, 0, .3);
-    color: #FCFAF2;
-    padding: 1px;
-    z-index: 1;
-}
-
-.order_choose_pic li span:nth-of-type(2){
-    display: block;
+    
     position: absolute;
-    background-color: rgb(0, 0, 0, 0);
-    width: 190px;
-    height: 190px;
-    line-height: 190px;
-    text-align: center;
-    color: rgb(252, 250, 242, 0);
-    font-size: 60px;
-    font-weight:lighter;
+    top: 0;
+
     transition: all .5s;
 }
 
-.order_choose_pic li:nth-child(n):hover span{
-    background-color: rgb(0, 0, 0, .3);
-    color: #FCFAF2;
-} */
+.order_choose_pic p{
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    background-color: rgba(3, 3, 3, 0.5);
+    padding: 0 5px;
+    /* z-index: 1; */
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* hover特效 */
+.order_choose_pic div:nth-of-type(n):hover span{
+    /* display: block; */
+    border-radius: 5px;
+    opacity: 1;
+}
+
+.order_choose_pic div:nth-of-type(n):hover img{
+    border-radius: 5px;
+}
+
+.order_choose_pic div:nth-of-type(n):hover p{
+    border-radius: 5px 0 0 0;
+}
+
+.order_choose_pic div:nth-of-type(n):hover{
+    transform: scale(1.1);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1190px) {
+    .order_choose_pic{
+        width: 100%;
+        margin: 0;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .order_choose_pic img{
+        width: 100%;
+        height: auto;
+    }
+
+    .order_choose_pic > div{
+        width: 100%;
+    }
+
+    .order_choose_pic span{
+        width: 100%;
+        height: 100%;
+        line-height: 135px;
+    }
+}
+
+/* --無法選取的花材-- */
+.order_choose_pic .choose_disable span{
+    opacity: 1;
+    font-size: 20px;
+    color: #000;
+    font-weight: normal;
+}
+
+.order_choose_pic div.choose_disable:hover{
+    transform: scale(1);
+}
 
 /* --選擇結果顯視-- */
 .order_choose_result{
     margin-left: 40px;
     width: 1110px;
-    height: 200px;
+    height: 150px;
     border: #D9D9D9 2px solid;
-    display: flex;
 }
 
 .order_choose_result div{
-    width: 70%;
-    height: 100px;
-    
-    margin: 10px 10px 0 0;
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    padding: 4px;
+    border: #BDE0CE solid 1.5px;
+    background-color: #DDF2E7;
+    border-radius: 5px;
+    margin: 20px 0 0 15px;
     display: inline-block;
+}
+
+.order_choose_result div p{
+    display: inline-block;
+    margin-right: 2px;
+}
+
+.order_choose_result div a{
+    display: inline-block;
+    line-height: 30px;
+    width: 25px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1190px) {
+    .order_choose_result{
+        width: 100%;
+        height: 200px;
+        margin-left: 0;
+    }
+
+    .order_choose_result div{
+        padding: 2px;
+        margin: 10px 5px 0;
+    }
+
+    .order_choose_result div p{
+        font-size: 14px;
+        font-weight: bold;
+    }
 }
 
 /* --訂做數量-- */
@@ -255,8 +326,14 @@ header nav ul li:nth-child(5) a{
     margin: 10px auto 20px 40px;
 }
 
+@media screen and (max-width: 1190px) {
+    .order_choose_num{
+        margin-left: 0;
+    }
+}
+
 /* --送出的按鈕-- */
-.order_choose_result button{
+/* .order_choose_result button{
     height: 50px;
     font-size: 20px;
     border-radius: 5px;
@@ -264,6 +341,21 @@ header nav ul li:nth-child(5) a{
     border: none;
     margin: 60px 10px 0 0;
     align-self: flex-end;
+} */
+
+.order_choose button{
+    margin-left: 40px;
+    /* margin-right: 40px; */
+}
+
+.order_choose button:nth-of-type(2){
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 1190px) {
+    .order_choose button{
+        margin-left: 0;
+    }
 }
 
 /* --訂做須知-- */
@@ -288,9 +380,11 @@ header nav ul li:nth-child(5) a{
 .order_detail li{
     border-bottom: #D9D9D9 2px solid;
     border-style: dashed;
-    height: auto;
+    height: 45px;
     margin-bottom: 10px;
+    overflow: hidden;
     position: relative;
+    transition: all 1s ease-in-out;
 }
 
 .order_detail h4{
@@ -304,11 +398,27 @@ header nav ul li:nth-child(5) a{
 }
 
 .order_detail p{
-    display: none;
     line-height: 30px;
 }
 
-/* --展開-- */
-.order_detail li:nth-of-type(n):hover p{
-    display: block;
+@media screen and (max-width: 1190px) {
+    .order_main > p{
+        margin-left: 0;
+    }
+    
+    .order_detail{
+        margin: 5px;
+        width: 95%;
+    }
+}
+
+/* --訂做詳情JS用-- */
+ul li.slide{
+    height: 140px;
+}
+
+@media screen and (max-width: 1190px) {
+    ul li.slide{
+        height: 200px;
+    }
 }

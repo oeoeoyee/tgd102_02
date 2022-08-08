@@ -1,7 +1,6 @@
 @import url('basic_settings.css');
 
 /* ---------------------內容--------------------- */
-
 /* -----------banner--------- */
 .main_banner{
     margin-top: 70px;
@@ -24,6 +23,12 @@
     letter-spacing: 5px;
 }
 
+@media screen and (max-width: 1190px){
+    .main_banner{
+        display: none;
+    }
+}
+
 /* -----------品牌理念----------- */
 .index_concept{
     display: flex;
@@ -39,7 +44,15 @@
 
 .index_concept_imgs img{
     position: absolute;
+
+    
 }
+
+/* .index_concept_imgs img:nth-child(2){
+    animation-name: index_concept_1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+} */
 
 .index_concept_imgs img:nth-child(3){
     top: 150px;
@@ -55,11 +68,51 @@
     left: 80px;
 }
 
+/* --圖動動畫-- */
+/* @keyframes index_concept_1{
+    0%{
+        transform: none;
+    }
+    40%{
+        transform: translate(10px, 10px);
+    }
+    50%{}
+    100%{
+        transform: none;
+    }
+} */
+
 /* --右方文字-- */
 .index_concept h5{
     display: block;
     width: 40%;
     line-height: 34px;
+}
+
+@media screen and (max-width: 1190px) {
+    .index_concept_imgs{
+        position:static;
+        width: 100%;
+        height: auto;
+    }
+
+    .index_concept_imgs img:first-of-type{
+        width: 100%;
+        position:static;
+    }
+
+    .index_concept_imgs img:last-of-type{
+        display: none;
+    }
+
+    .index_concept_imgs div{
+        display: none;
+    }
+
+    .index_concept h5{
+        width: 100%;
+        line-height: 26px;
+    }
 }
 
 /* -----------提供服務----------- */
@@ -113,7 +166,67 @@
     margin: 15px;
 }
 
+/* --動畫&hover-- */
+.index_serve a{
+    transition: all 1s;
+}
+
+.index_serve a:nth-child(n) img{
+    transition: all .5s;
+}
+
+.index_serve a:nth-child(n):hover{
+    transform: scale(1.1);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.index_serve a:nth-child(n) img:hover{
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 1190px){
+    .index_serve_h1{
+        margin: 30px auto 15px;
+    }
+
+    .index_serve{
+        margin: 0 auto;
+        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .index_serve a{
+        display: block;
+        width: 100%;
+    }
+    
+    .index_serve img{
+        height: 150px;
+        /* height: 50vw; */
+        object-fit:cover;
+    }
+
+    .index_serve > div{
+        display: none;
+    }
+
+    .index_serve h5{
+        padding: 10px;
+        border-radius: 3px;
+        margin: 15% 35% auto 35%;
+    }
+}
 /* -----------作品集----------- */
+/* --外層高度控制slide down&up-- */
+.index_works_out{
+    height: 365px;
+    overflow: hidden;
+    margin-bottom: 5px;
+    /* scroll-behavior: smooth; */
+}
+
 /* --尚未展開-- */
 .index_works li:nth-of-type(odd){
     width: 1190px;
@@ -145,14 +258,32 @@
 .index_works li:nth-of-type(odd) a{
     width: 100%;
     height: 65px;
-    background-color: #6D6D6D;
+    background-color: #D9D9D9;
     text-align: center;
     line-height: 70px;
-    color: white;
+    color: #6D6D6D;
     font-size: 20px;
     
     position: absolute;
     bottom: 0;
+
+    animation-name: index_works_a;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+/* --a動畫-- */
+@keyframes index_works_a{
+    0%{
+        line-height: 70px;
+    }
+    30%{
+        line-height: 90px;
+        text-shadow: 0 0 4px #6D6D6D;
+    }
+    100%{
+        line-height: 70px;
+    }
 }
 
 /* --尚未展開換照片區-- */
@@ -166,61 +297,15 @@
     background-image: url(../img/index_works1.jpg);
 }
 
-/* --展開的樣子-- */
-/* .index_works1 button:hover {
-    display: none;
+@media screen and (max-width: 1190px) {
+    .index_works_out{
+        height: 580px;
+    }
+
+    .index_works li:nth-of-type(odd){
+        display: none;
+    }
 }
-
-.index_works1_open{
-    display: flex;
-    width: 100%;
-    height: 445px;
-    background-color: #DDF2E7;
-
-    position: relative;
-}
-
-.index_works1_open ~ .index_works1_open{
-    background-color: #d6f5ff;
-    background-color: #f5eed5;
-}
-
-.index_works1_open > a{
-    width: 90px;
-    line-height: 445px;
-    text-align: center;
-}
-
-.index_works1_open div{
-    position: absolute;
-    left: 390px;
-    bottom: 10px;
-    width: auto;
-}
-
-.index_works1_open div > a{
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    background-color: #6D6D6D;
-    border-radius: 100%;
-    margin: 0 2px 0;
-}
-
-.index_works1_open img{
-    width: 590px;
-    height: 394px;
-    margin: 20px auto 30px;
-}
-
-.index_works1_open span{
-    width: 33%;
-    background-color: #fff;
-    padding: 70px 70px 30px 45px;
-    overflow: auto;
-
-    position: relative;
-} */
 
 /* --展開的樣子-- */
 .index_works1_open{
@@ -235,36 +320,12 @@
     margin: 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .index_works1_open_img img{
     width: 73%;
-    /* height: 394px; */
-    margin: 20px 0 0;
 }
-
-/* ---------------------------------------------- */
-#slide{
-    position: relative;
-}
-
-#slide img{
-    display: block;
-    opacity: 0;
-    visibility: hidden;
-    /* transition: 0.8s; */
-    position: absolute;
-}
-
-#slide img:first-of-type{
-    position: static;
-}
-
-#slide img.show{
-    opacity: 1;
-    visibility: visible;
-}
-/* ---------------------------------------------- */
 
 .index_works1_open_img > a{
     width: 13%;
@@ -281,7 +342,7 @@
     display: inline-block;
     width: 6px;
     height: 6px;
-    background-color: #6D6D6D;
+    background-color: #D9D9D9;
     border-radius: 100%;
     margin: 0 2px 0;
     transform: translateX(-50%);
@@ -331,6 +392,82 @@
     margin-right: 40px;
 }
 /* 以上卷軸 */
+
+/* JS */
+#js_slide{
+    position: relative;
+    height: 400px;
+}
+
+#js_slide img{
+    opacity: 0;
+    /* visibility: hidden; */
+    transition: 0.5s;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left:0;
+    width: 73%;
+    margin: auto;
+    height: 90%;
+    object-fit: cover;
+}
+
+/* #js_slide img:first-of-type{
+    position: static;
+} */
+
+#js_slide .js_show{
+    opacity: 1;
+    background-color: #6D6D6D;
+    /* visibility: visible; */
+}
+
+@media screen and (max-width: 1190px){
+    .index_works1_open{
+        flex-wrap: wrap;
+    }
+
+    .index_works1_open_img{
+        width: 100%;
+    }
+
+    .index_works1_open_img > div{
+        display: none;
+    }
+
+    .index_works1_open_img > a{
+        /* line-height: 260px;
+        width: 5%;
+        font-size: 20px; */
+        display: none;
+    }
+
+    .index_works1_open_img img{
+        width: 85%;
+    }
+
+    .index_works1_open span{
+        width: 100%;
+        padding: 20px 20px 30px;
+        height: 285px;
+    }
+
+    .index_works1_open span > a{
+        display: none;
+    }
+
+    #js_slide{
+        height: 260px;
+    }
+
+    #js_slide img{
+        width: 90%;
+        height: auto;
+    }
+}
+
 /* -----------花藝師團隊----------- */
 .index_team{
     background-color: #DDF2E7;
@@ -380,175 +517,26 @@
     background-position: -180px 0;
 }
 
-
 /* -----------------螢幕小於414時------------------- */
-@media screen and (max-width: 414px){
-    html{
-        font-size: 62.5%;
-    }
-
-    body{
-        font-family: "微軟正黑體", serif, arial;
-    }
-
-    h1{
-        font-size: 2.6rem;
-        font-weight:bold;
-        line-height: 50px;
-        margin: 0;
-    }
-
-    h5{
-        font-size: 1.8rem;
-        font-weight:bold;
-    }
-
-    header{
-        display: none;
-    }
-
-    .main_banner{
-        display: none;
-    }
-
-    .main_block{
-        width: 90vw;
-        margin: 0 auto;
-    }
-
-    .index_concept_imgs{
-        position:static;
-        width: 100%;
-        height: auto;
-    }
-
-    .index_concept_imgs img:first-of-type{
-        width: 100%;
-        position:static;
-    }
-
-    .index_concept_imgs img:last-of-type{
-        display: none;
-    }
-
-    .index_concept_imgs div{
-        display: none;
-    }
-
-    .index_concept h5{
-        width: 100%;
-        line-height: 24px;
-    }
-
-    .index_serve_h1{
-        margin: 0;
-    }
-
-    .index_serve{
-        margin: 0;
-        width: auto;
-        display: flex;
-        flex-wrap: wrap;
-
-        /* grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr; */
-    }
-
-    .index_serve > div{
-        display: none;
-    }
-
-    .index_serve h5{
-        padding: 7px;
-        border-radius: 3;
-    }
-
-    .index_serve img{
-        width: 50vw;
-        height: 50vw;
-    }
-
-    /* .index_serve a:nth-child(1){
-        grid-row: 1 / 2;
-    }
-    
-    .index_serve a:nth-child(3){
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
-    }
-
-    .index_serve a:nth-child(4){
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
-    }
-
-    .index_serve a:nth-child(5){
-        grid-column: 2 / 3;
-        grid-row: 2 / 3;
-    } */
-
-    .index_works li:nth-of-type(odd){
-        width: 100%;
-        height: 25vh;
-    }
-
-    .index_works li:nth-of-type(odd) span{
-        width: 100%;
-        height: 100%;
-    }
-
-    .index_works li:nth-of-type(odd) h4{
-        margin: 0;
-    }
-
-    .index_works li:nth-of-type(odd) p{
-        margin: 0;
-    }
-
-    .index_works li:nth-of-type(odd) a{
-        height: 20%;
-    }
-
-    .index_works1_open{
-        flex-wrap: wrap;
-        height: 55vh;
-    }
-
-    .index_works1_open_img{
-        width: 100%;
-        height: auto;
-    }
-
-    .index_works1_open_img > a{
-        line-height: 0;
-        width: 5%;
-    }
-
-    .index_works1_open_img img{
-        width: 100%;
-    }
-
-    .index_works1_open span{
-        width: 100%;
-        padding: 10px;
-        /* display: block;
-        overflow:auto; */
-    }
-
+@media screen and (max-width: 1190px){
     .index_team{
         width: 100vw;
         margin: 0 auto;
+        padding-top: 0;
+        padding-bottom: 20px;
     }
 
     .index_team ul{
         flex-wrap: wrap;
         width: 100%;
+        margin: 0 auto;
     }
 
     .index_team li{
-        width: 90%;
+        width: 80%;
         height: 110px;
         margin: 20px auto;
+        padding-top: 25px;
         text-align: left;
         text-indent: 17rem;
     }
@@ -563,10 +551,5 @@
     .index_team li p:first-of-type{
         margin-top: 10px;
     }
-
-    footer h6{
-        font-size: 1.4rem;
-    }
-
 }
 

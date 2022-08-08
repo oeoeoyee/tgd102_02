@@ -11,12 +11,12 @@
 <body>
     <header><!-- 導覽列 -->
         <nav>
-            <ul>
-                <li><a href="index.html"><img src='./img/logo.png' alt=""></a></li>
+            <a href="index.html"><img src='./img/logo.png' alt=""></a>
+            <ul class="header_nav">
                 <li><a href="news.html">花藝情報</a></li>
                 <li><a href="identify.html">認識花材</a></li>
-                <li><a href="product.html">商品</a>
-                    <ol>
+                <li class="js_product js_ol_open"><a href="product.html">百日商品</a>
+                    <ol class="js_product_ol">
                         <li><a href="product.html">最新商品</a></li>
                         <li><a href="product.html">花圈</a></li>
                         <li><a href="product.html">盆花</a></li>
@@ -25,13 +25,14 @@
                     </ol>
                 </li>
                 <li><a href="order.html">訂做商品</a></li>
+                <li class="nav_icon4"><a href="#"></a></li>
             </ul>
         </nav>
-        <ul class="nav_icon">
+        <ul class="header_icon">
             <li class="nav_icon1"><input type="text" placeholder="想要什麼商品？"><a href="#"></a></li>
             <li class="nav_icon2"><a href="#"></a></li>
             <li class="nav_icon3"><a href="cart.html"></a></li>
-            <li class="nav_icon4"><a href="#"></a></li>
+            <li class="nav_icon4"><a href="#" class="js_changeicon"></a></li>
         </ul>
     </header>
 
@@ -50,6 +51,7 @@
                 <div class="product1_top_word_warn">
                     <img src="img/identify_icon.png" alt="">
                     <p>售價包含花瓶與花材，不拆售</p>
+                    <p>花材：綠石竹、綠火鶴、羊齒蕨<br>容器：特製圓弧木瓶<br>商品長寬高：約20x20x50 cm</p>
                 </div>
                 <div class="num_botton product1_top_word_num">
                     <input type="button" value="-">
@@ -61,8 +63,8 @@
             </div>
         </div>
         <!-- 下方文字 -->
-        <h1>商品資訊</h1>
-        <p>花材：綠石竹、綠火鶴、羊齒蕨<br>容器：特製圓弧木瓶<br>商品長寬高：約20x20x50 cm</p>
+        <!-- <h1>商品資訊</h1>
+        <p>花材：綠石竹、綠火鶴、羊齒蕨<br>容器：特製圓弧木瓶<br>商品長寬高：約20x20x50 cm</p> -->
         <h1>注意事項</h1>
         <p>1.商品均為手工製作，與照片有些微差異屬正常現象<br>2.如非商品種類錯誤，或是容器有嚴重瑕疵，均不接受退貨，敬請見諒。</p>
         <h1>相關商品</h1>
@@ -113,5 +115,7 @@
         <p>本網站為緯育TibaMe前端工程師班第78期學員專題作品，本平台僅供學習、展示之用。</p>
         <a href="resource.html">參考資源</a>
     </footer>
+
+    <script src="./js/basic_set.js"></script>
 </body>
 </html>

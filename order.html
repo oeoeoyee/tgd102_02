@@ -12,12 +12,12 @@
 <body>
     <header><!-- 導覽列 -->
         <nav>
-            <ul>
-                <li><a href="index.html"><img src='./img/logo.png' alt=""></a></li>
+            <a href="index.html"><img src='./img/logo.png' alt=""></a>
+            <ul class="header_nav">
                 <li><a href="news.html">花藝情報</a></li>
                 <li><a href="identify.html">認識花材</a></li>
-                <li><a href="product.html">商品</a>
-                    <ol>
+                <li class="js_product js_ol_open"><a href="product.html">百日商品</a>
+                    <ol class="js_product_ol">
                         <li><a href="product.html">最新商品</a></li>
                         <li><a href="product.html">花圈</a></li>
                         <li><a href="product.html">盆花</a></li>
@@ -26,13 +26,14 @@
                     </ol>
                 </li>
                 <li><a href="order.html">訂做商品</a></li>
+                <li class="nav_icon4"><a href="#"></a></li>
             </ul>
         </nav>
-        <ul class="nav_icon">
+        <ul class="header_icon">
             <li class="nav_icon1"><input type="text" placeholder="想要什麼商品？"><a href="#"></a></li>
             <li class="nav_icon2"><a href="#"></a></li>
             <li class="nav_icon3"><a href="cart.html"></a></li>
-            <li class="nav_icon4"><a href="#"></a></li>
+            <li class="nav_icon4"><a href="#" class="js_changeicon"></a></li>
         </ul>
     </header>
 
@@ -45,98 +46,95 @@
         <div class="order_choose">
             <h1>選擇訂做項目</h1>
             <h4>商品種類：</h4>
-            <a href=""><h6>花圈</h6></a>
-            <a href=""><h6>盆花</h6></a>
-            <a href=""><h6>瓶插花</h6></a>
-            <a href=""><h6>花束</h6></a>
+            <!-- <a><h6>花圈</h6></a> -->
+           <h6 class="js_choose_kind">盆花</h6>
+           <h6 class="js_choose_kind">瓶插花</h6>
+           <h6 class="js_choose_kind">花束</h6>
             <h4>選擇花材：</h4>
             <div class="order_choose_pic">
                 <div>
+                    <img src="/img/order_choose_pic_11.jpg" alt="">
+                    <p class="choose_this">風信子</p>
+                    <div class=""></div>
+                    <span>+</span>
+                </div>
+                <div>
                     <img src="/img/order_choose_pic_1.jpg" alt="">
-                    <span>
-                        <p>尤加利葉</p>
-                        <a>選擇</a>
-                    </span>
+                    <div class=""></div>
+                    <p>繡球花</p>
+                    <span>+</span>
                 </div>
                 <div>
                     <img src="/img/order_choose_pic_2.jpg" alt="">
-                    <span>
-                        <p>金合歡</p>
-                        <a>選擇</a>
-                    </span>
+                    <div class=""></div>
+                    <p>尤加利葉</p>
+                    <span>+</span>
                 </div>
                 <div>
                     <img src="/img/order_choose_pic_3.jpg" alt="">
-                    <span>
-                        <p>大理花</p>
-                        <a>選擇</a>
-                    </span>
+                    <div class=""></div>
+                    <p>金合歡</p>
+                    <span>+</span>
+                </div>
+                <div>
+                    <img src="/img/order_choose_pic_7.jpg" alt="">
+                    <div class=""></div>
+                    <p>卡斯比亞</p> 
+                    <span>+</span>
+                </div>
+                <div class="choose_disable">
+                    <img src="/img/order_choose_pic_10.jpg" alt="">
+                    <div class=""></div>
+                    <p>西洋水仙</p>
+                    <span>無法選取</span>
+                </div>
+                <div>
+                    <img src="/img/order_choose_pic_8.jpg" alt="">
+                    <div class=""></div>
+                    <p>罌粟</p>
+                    <span>+</span>
+                </div>
+                <div>
+                    <img src="/img/order_choose_pic_12.jpg" alt="">
+                    <div class=""></div>
+                    <p>滿天星</p>
+                    <span>+</span>
                 </div>
                 <div>
                     <img src="/img/order_choose_pic_4.jpg" alt="">
-                    <span>
-                        <p>芍藥</p>
-                        <a>選擇</a>
-                    </span>
+                    <div class=""></div>
+                    <p>大理花</p>
+                    <span>+</span>
                 </div>
                 <div>
                     <img src="/img/order_choose_pic_5.jpg" alt="">
-                    <span>
-                        <p>中康乃馨</p>
-                        <a>選擇</a>
-                    </span>
+                    <p>芍藥</p>
+                    <div class=""></div>
+                    <span>+</span>
+                </div>
+                <div>
+                    <img src="/img/order_choose_pic_9.jpg" alt="">
+                    <div class=""></div>
+                    <p>重瓣鬱金香</p>
+                    <span>+</span>
                 </div>
                 <div>
                     <img src="/img/order_choose_pic_6.jpg" alt="">
-                    <span>
-                        <p>繡球花</p>
-                        <a>選擇</a>
-                    </span>
-                </div>
-                <div>
-                    <img src="/img/order_choose_pic_4.jpg" alt="">
-                    <span>
-                        <p>金合歡</p>
-                        <a>選擇</a>
-                    </span>
-                </div>
-                <div>
-                    <img src="/img/order_choose_pic_1.jpg" alt="">
-                    <span>
-                        <p>中康乃馨</p>
-                        <a>選擇</a>
-                    </span>
-                </div>
-                <div>
-                    <img src="/img/order_choose_pic_2.jpg" alt="">
-                    <span>
-                        <p>尤加利葉</p>
-                        <a>選擇</a>
-                    </span>
-                </div>
-                <div>
-                    <img src="/img/order_choose_pic_6.jpg" alt="">
-                    <span>
-                        <p>大理花</p>
-                        <a>選擇</a>
-                    </span>
-                </div>
-                <div>
-                    <img src="/img/order_choose_pic_2.jpg" alt="">
-                    <span>
-                        <p>尤加利葉</p>
-                        <a>選擇</a>
-                    </span>
-                </div>
-                <div>
-                    <img src="/img/order_choose_pic_4.jpg" alt="">
-                    <span>
-                        <p>芍藥</p>
-                        <a>選擇</a>
-                    </span>
+                    <div class=""></div>
+                    <p>中康乃馨</p>
+                    <span>+</span>
                 </div>
             </div>
-            <div class="order_choose_result"></div>
+            <div class="order_choose_result">
+                <!-- <div>
+                    <p>康乃馨</p>
+                    <a><i class="fa-regular fa-circle-xmark js_choose_result_del"></i></a>
+                </div>
+                <div>
+                    <p>繡球花</p>
+                    <a><i class="fa-regular fa-circle-xmark js_choose_result_del"></i></a>
+                </div> -->
+            </div>
             <h4>商品數量：</h4>
             <div class="order_choose_num num_botton">
                 <input type="button" value="-">
@@ -175,20 +173,24 @@
         <p>1. 訂做商品均需至少五個工作天製作。</p><p>2. 訂做商品均為手工製作，如非商品有誤(商品種類、數量、花種錯誤)，或是容器有嚴重瑕疵，均不接受退貨，敬請見諒。</p><p> 3. 如商品有特殊需求，請於結帳時，於 <a href="#">其他>>訂單備註</a> 中詳細敘述。</p>
         <h1>訂做詳細資訊</h1>
         <ul class="order_detail">
-            <li><h4>花圈底圈</h4>
-                <a href="">﹀</a>
+            <!-- <li class="js_order_slide">
+                <h4 class="js_order">花圈底圈</h4>
+                <a>﹀</a>
                 <p>我們會使用長寬為30*30的樹枝材質花圈當作花圈的底。<br>花圈的花材、葉材就由客人指定；如花材、葉材不滿三種，將由設計師適度補上滿天星、尤加利葉等。<br>如不需要設計師的額外補充，請在結帳時註明。</p>
-            </li>
-            <li><h4>盆花使用器具</h4>
-                <a href="">﹀</a>
+            </li> -->
+            <li class="js_order_slide">
+                <h4 class="js_order">盆花使用器具</h4>
+                <a>﹀</a>
                 <p>我們會使用直徑20、高度25的陶瓷花器。<br>盆花的花材、葉材就由客人指定；如花材、葉材不滿三種，將由設計師適度補上滿天星、尤加利葉等。<br>如不需要設計師的額外補充，請在結帳時註明。</p>
             </li>
-            <li><h4>瓶插花使用器具</h4>
-                <a href="">﹀</a>
+            <li class="js_order_slide">
+                <h4 class="js_order">瓶插花使用器具</h4>
+                <a>﹀</a>
                 <p>我們會將花束做成可投入式，並直徑15高度20的玻璃花瓶，客人可於收到後自行選擇擺放的形式。<br>花材、葉材就由客人指定；如花材、葉材不滿三種，將由設計師適度補上滿天星、尤加利葉等。<br>如不需要設計師的額外補充，請在結帳時註明。</p>
             </li>
-            <li><h4>花束包裝</h4>
-                <a href="">﹀</a>
+            <li class="js_order_slide">
+                <h4 class="js_order">花束包裝</h4>
+                <a>﹀</a>
                 <p>用色號黃藍綠灰白的霧面包裝紙，搭配一透明塑膠包裝紙作為外包裝。<br>花材、葉材就由客人指定；如花材、葉材不滿三種，將由設計師適度補上滿天星、尤加利葉等。<br>如不需要設計師的額外補充，請在結帳時註明。</p>
             </li>
         </ul>
@@ -213,6 +215,18 @@
         </ul>
         <p>本網站為緯育TibaMe前端工程師班第78期學員專題作品，本平台僅供學習、展示之用。</p>
         <a href="resource.html">參考資源</a>
-    </footer>    
+    </footer>  
+    
+    <script src="./js/basic_set.js"></script>
+    <!-- <script src="./js/order.js"></script> -->
+
+    <script>
+        document.addEventListener("click", function(e){
+            if(e.target.classList.contains("js_order")){
+                e.target.closest("li.js_order_slide").classList.toggle("slide");
+            }
+        });
+
+    </script>
 </body>
 </html>

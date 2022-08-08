@@ -8,32 +8,80 @@ header nav ul li:nth-child(2) a{
 
 /* ---------------------花藝情報頁--------------------- */
 /* -----------花藝新聞資訊----------- */
+/* --改swipper-- */
+.swiper-wrapper::after{width:1px;height:var(--swiper-virtual-size)}:root{
+    --swiper-navigation-size: 20px;
+    --swiper-theme-color:#fff;
+}
+
+.swiper-button-next,.swiper-button-prev{
+    position:absolute;
+    top:40%;
+    width:calc(var(--swiper-navigation-size)/ 44 * 30);
+    height:var(--swiper-navigation-size);
+    margin-top:calc(0px - (var(--swiper-navigation-size)/ 2));z-index: 10;
+    /* cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    color:var(--swiper-navigation-color,var(--swiper-theme-color)); */
+    background-color: #6D6D6D;
+    opacity: .9;
+    padding: 4px 5px;
+    border-radius: 2px;
+    font-size: 25px;
+}
+
+.swiper-button-next:after,.swiper-button-prev:after{
+    /* font-family:swiper-icons;
+    font-size:var(--swiper-navigation-size);
+    text-transform:none;
+    letter-spacing:0;
+    font-variant:initial;
+    line-height:1; */
+    display: none;
+}
+
+.swiper-button-next{
+    right:-10px;
+}
+
+.swiper-button-prev{
+    left:-10px;
+}
+
+.swiper{
+    width: 1160px;
+    height: 450px;
+    margin-bottom: 100px;
+    overflow: inherit;
+}
+
+@media screen and (max-width: 1190px){
+    .swiper{
+        width: 100%;
+        height: 320px;
+        margin-bottom: 30px;
+        overflow: inherit;
+    }
+
+    .swiper-button-next{
+        display: none;
+    }
+    
+    .swiper-button-prev{
+        display: none;
+    }
+}
+
 /* --未點開前-- */
-.news_info{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 1121px;
-    margin-top: 150px;
-
-    position: relative;
-}
-
-.news_info i:first-of-type{
-    left: -13px;
-    top: 50%;
-    line-height: 25px;
-}
-
-.news_info i:last-of-type{
-    right: -13px;
-    top: 50%;
-    line-height: 25px;
+.news_info_swiper_hide{
+    overflow: hidden;
 }
 
 .news_info img{
-    width: 330px;
-    height: 330px;
+    width: 100%;
+    /* height: 330px; */
     object-fit: cover;
     border-radius: 5px;
 }
@@ -49,75 +97,76 @@ header nav ul li:nth-child(2) a{
     margin-top: 2px;
 }
 
-.news_info li:nth-of-type(1) span{
+@media screen and (max-width: 1190px) {
+    .news_info span{
+        text-indent: 2em;
+        height: 17px;
+    }
+}
+
+.news_info_li h4{
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+}
+
+.news_info_li_iconb{
     background-image: url("../img/news_info_icon_b.png");
 }
 
-.news_info li:nth-of-type(2) span{
-    background-image: url("../img/news_info_icon_y.png");
-}
-
-.news_info li:nth-of-type(3) span{
+.news_info_li_icong{
     background-image: url("../img/news_info_icon_g.png");
 }
 
-.news_info h4{
-    line-height: 28px;
+.news_info_li_icony{
+    background-image: url("../img/news_info_icon_y.png");
 }
 
-.news_info p{
-    line-height: 24px;
-}
 
 /* --點開後資訊框-- */
+/* 加了none會隱藏 */
+.-none{
+    display: none;
+}
+
+/* 燈箱背景 */
+#news_info_lightbox{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: hsla(0, 0%, 0%, .5);
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
 .news_info_open{
-    width: 750px;
+    width: 800px;
     height: 450px;
     background-color: #FCFAF2;
     box-shadow: 1px 1px 2px #6D6D6D;
     border-radius: 2px;
     display: flex;
 
-    position: fixed;
+    position: absolute;
     left: 50%;
-    right: 50%;
-    top: 55%;
-    bottom: 50%;
+    top: 57%;
     transform: translateX(-50%) translateY(-50%);
-    display: none;
 }
 
 .news_info_open img{
-    height: 400px;
+    width: 300px;
     border-radius: 2px;
     display: inline-block;
-    margin: auto 50px;
+    margin: auto 15px auto 50px;
+    flex-grow: 1;
 }
 
 .news_info_open div{
-    width: 30%;
+    width: 40%;
     height: auto;
-    margin: auto 0;
-
-    position: relative;
-}
-
-.news_info_open div button{
-    border-radius: 100%;
-    border: none;
-    width: 25px;
-    height: 25px;
-    background-color: #FCFAF2;
-    padding: 0;
-    
-    position: absolute;
-    right: -60px;
-    top: -15px;
-}
-
-.news_info_open div button i{
-    font-size: 25px;
-    color: #434343;
+    margin: auto 50px auto 15px;
+    flex-grow: 1;
+    /* position: relative; */
 }
 
 .news_info_open div span{
@@ -133,9 +182,68 @@ header nav ul li:nth-child(2) a{
     margin-bottom: 20px;
 }
 
-/* --click後open先用hover代替-- */
-.news_info:hover .news_info_open{
-    display: flex;
+.news_info_open button{
+    border-radius: 100%;
+    border: none;
+    width: 25px;
+    height: 25px;
+    background-color: #FCFAF2;
+    padding: 0;
+    
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+.news_info_open button i{
+    font-size: 25px;
+    color: #434343;
+}
+
+@media screen and (max-width: 1190px) {
+    .news_info_open{
+        width: 90%;
+        height: 70%;
+        flex-direction: column;
+    
+        position: absolute;
+        left: 50%;
+        top: 50%;
+    }
+
+    .news_info_open img{
+        /* width: 80%;
+        height: 30%;
+        display: block;
+        margin: 60px auto 15px; */
+        display: none;
+    }
+
+    .news_info_open div{
+        width: auto;
+        height: auto;
+        margin: 60px 20px auto 20px;
+        overflow: auto;
+    }
+
+    .news_info_open div span{
+        text-indent: 2em;
+        font-size: 1.3em;
+        margin-bottom: 15px;
+    }
+
+    .news_info_open button{
+        width: 30px;
+        height: 30px;
+        
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+    
+    .news_info_open button i{
+        font-size: 30px;
+    }
 }
 
 /* -----------花藝裝飾----------- */
@@ -174,6 +282,16 @@ header nav ul li:nth-child(2) a{
 .news_deco div img:nth-child(3){
     width: 100%;
 }
+@media screen and (max-width: 1190px) {
+    .news_deco{
+    flex-wrap: wrap;
+    }
+
+    .news_deco img:nth-child(1){
+        width: 100%;
+    }
+}
+
 
 /* -----------鮮花養護----------- */
 .news_care{
@@ -220,4 +338,22 @@ header nav ul li:nth-child(2) a{
 
 .news_care li:nth-child(5) div{
     background-position: -440px 0;
+}
+
+@media screen and (max-width: 1190px) {  
+    .news_care{
+        margin-bottom: 60px;
+    }
+
+    .news_care ul{
+        display: block;
+    }
+
+    .news_care div{
+        margin: 25px auto 10px;
+    }
+
+    .news_care h5{
+        line-height: 2.5rem;
+    }
 }

@@ -11,12 +11,12 @@
 <body>
     <header><!-- 導覽列 -->
         <nav>
-            <ul>
-                <li><a href="index.html"><img src='./img/logo.png' alt=""></a></li>
+            <a href="index.html"><img src='./img/logo.png' alt=""></a>
+            <ul class="header_nav">
                 <li><a href="news.html">花藝情報</a></li>
                 <li><a href="identify.html">認識花材</a></li>
-                <li><a href="product.html">商品</a>
-                    <ol>
+                <li class="js_product js_ol_open"><a href="product.html">百日商品</a>
+                    <ol class="js_product_ol">
                         <li><a href="product.html">最新商品</a></li>
                         <li><a href="product.html">花圈</a></li>
                         <li><a href="product.html">盆花</a></li>
@@ -25,16 +25,17 @@
                     </ol>
                 </li>
                 <li><a href="order.html">訂做商品</a></li>
+                <li class="nav_icon4"><a href="#"></a></li>
             </ul>
         </nav>
-        <ul class="nav_icon">
+        <ul class="header_icon">
             <li class="nav_icon1"><input type="text" placeholder="想要什麼商品？"><a href="#"></a></li>
             <li class="nav_icon2"><a href="#"></a></li>
             <li class="nav_icon3"><a href="cart.html"></a></li>
-            <li class="nav_icon4"><a href="#"></a></li>
+            <li class="nav_icon4"><a href="#" class="js_changeicon"></a></li>
         </ul>
     </header>
-
+    
     <main class="main_block cart_main cart2_main">
         <div class="cart_top cart2_top">
             <h6><span><a href="cart.html">STEP.1  >></a></span> STEP.2  >> <span>STEP.3</span></h6>
@@ -99,7 +100,7 @@
                 <label for="cart2_other_4">訂單備註</label>
                 <input type="text" id="cart2_other_4">
             </div>
-            <a href="cart_3.html"><input type="submit" value="提交訂單" class="button"></a>
+            <a href="cart_3.html"><input type="submit" value="提交訂單"></a>
         </div>
 
     </main>
@@ -122,5 +123,7 @@
         <p>本網站為緯育TibaMe前端工程師班第78期學員專題作品，本平台僅供學習、展示之用。</p>
         <a href="resource.html">參考資源</a>
     </footer>
+
+    <script src="./js/basic_set.js"></script>
 </body>
 </html>
