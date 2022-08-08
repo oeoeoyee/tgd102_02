@@ -1,7 +1,7 @@
 @import url('basic_settings.css');
 
 /* product */
-header nav ul li:nth-child(4) a{
+header nav ul li:nth-child(3) > a{
     color: #6D6D6D;
     /* text-shadow: 3px 3px 2px #BDE0CE; */
 }
@@ -150,7 +150,6 @@ header nav ul li:nth-child(4) a{
 
 .product_list li img{
     width: 250px;
-    /* height: 250px; */
     object-fit: cover;
 }
 
@@ -164,20 +163,23 @@ header nav ul li:nth-child(4) a{
     transition: all .4s;
 }
 
-.product_list li button{
-    /* display: none; */
-    opacity: 0;
-
+.product_list li div{
     position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40px;
+    width: 150px;
+}
+
+.product_list li button{
+    opacity: 0;
+    margin: auto 5px;
     transition: all .4s;
 }
 
 .product_list li button:first-of-type{
     width: 40px;
-    left: 72px;
     background-image: url("../img/product_icon_cart.png");
     background-position: 9px 8px;
     background-repeat: no-repeat;
@@ -185,7 +187,7 @@ header nav ul li:nth-child(4) a{
 
 .product_list li button:last-of-type{
     width: 60px;
-    right: 72px;
+    transform: translateY(-30%);
 }
 
 @media screen and (max-width: 1190px) {
@@ -196,12 +198,35 @@ header nav ul li:nth-child(4) a{
     
     .product_list li{
         width: 48%;
-        margin: 5px 3px 5px;
+        margin: 5px 3px 10px;
+        border: .5px solid #6D6D6D;
     }
 
     .product_list li img{
         width: 100%;
+        display: block;
     }
+
+    .product_list li div{
+        position: static;
+        transform: translateX(0);
+        height: 35px;
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        order: 2;
+    }
+    
+    .product_list li button{
+        opacity: .9;
+        height: 35px;
+    }
+    
+    .product_list li button:first-of-type{
+        background-position: 7px 5px;
+    }
+    
+    .product_list li button:last-of-type{}
 }
 
 /* ---------------------商品頁1--------------------- */

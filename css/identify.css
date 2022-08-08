@@ -1,7 +1,7 @@
 @import url('basic_settings.css');
 
 /* identify */
-header nav ul li:nth-child(3) a{
+header nav ul li:nth-child(2) a{
     color: #6D6D6D;
     /* text-shadow: 3px 3px 2px #BDE0CE; */
 }
@@ -110,6 +110,14 @@ header nav ul li:nth-child(3) a{
 }
 
 @media screen and (max-width: 1190px){
+    .identify_main > img{
+        margin-top: 20px;
+    }
+
+    .identify_main > h6{
+        margin-bottom: 30px;
+    }
+
     .identify{
         flex-direction: column;
         border-left: none;
@@ -126,6 +134,7 @@ header nav ul li:nth-child(3) a{
 
     .identify_img{
         width: 100%;
+        margin-bottom: 30px;
     }
 
     .identify_word{

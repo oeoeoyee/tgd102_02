@@ -1,9 +1,8 @@
 @import url('basic_settings.css');
 
 /* order */
-header nav ul li:nth-child(5) a{
+header nav ul > li:nth-child(4) a{
     color: #6D6D6D;
-    /* text-shadow: 3px 3px 2px #BDE0CE; */
 }
 
 /* ---------------------訂做商品頁--------------------- */
@@ -253,9 +252,16 @@ header nav ul li:nth-child(5) a{
     }
 
     .order_choose_pic span{
+        display: block;
         width: 100%;
         height: 100%;
         line-height: 135px;
+        opacity: 1;
+        background-color: rgb(255, 255, 255, 0);
+    }
+
+    .choose_disable span{
+    background-color: rgb(0, 0, 0, .2);
     }
 }
 
@@ -384,7 +390,7 @@ header nav ul li:nth-child(5) a{
     margin-bottom: 10px;
     overflow: hidden;
     position: relative;
-    transition: all 1s ease-in-out;
+    transition: all .7s ease-in-out;
 }
 
 .order_detail h4{

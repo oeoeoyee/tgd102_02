@@ -288,11 +288,14 @@ ul.header_nav{
     text-shadow: 3px 3px 2px #BDE0CE;
 }
 
-.header_nav li:nth-child(3) ol a:hover{
+.header_nav:nth-of-type(3) li ol a:hover{
     color: #6D6D6D;
     text-shadow: 3px 3px 2px #BDE0CE;
 }
 
+.header_nav li:nth-child(3) ol:hover li{
+    color: #000
+}
 
 /* --右側icon-- */
 .header_icon{
@@ -379,10 +382,11 @@ ul.header_nav{
         top: 70px;
     }
 
-    .header_nav li{
+    .header_nav > li{
         padding: 0 0;
         line-height: 6rem;
         font-size: 2.0rem;
+        border-bottom: 1px dashed #BDE0CE;
     }
 
     .header_nav li:nth-of-type(3) ol{
@@ -419,7 +423,7 @@ ul.header_nav{
 
     .nav_icon1:hover input{
         display: inline-block;
-        width: 150px;
+        width: 100px;
         height: 40px;
         /* display: none; */
     }
@@ -434,7 +438,7 @@ ul.header_nav{
     }
 
     .-headup{
-        transform: translateY(-70px);
+        transform: translateY(0);
     }
 }
 

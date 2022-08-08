@@ -1,7 +1,7 @@
 @import url('basic_settings.css');
 
 /* news */
-header nav ul li:nth-child(2) a{
+header nav ul li:nth-child(1) a{
     color: #6D6D6D;
     /* text-shadow: 3px 3px 2px #BDE0CE; */
 }
@@ -144,7 +144,7 @@ header nav ul li:nth-child(2) a{
     height: 450px;
     background-color: #FCFAF2;
     box-shadow: 1px 1px 2px #6D6D6D;
-    border-radius: 2px;
+    border-radius: 3px;
     display: flex;
 
     position: absolute;
@@ -155,7 +155,7 @@ header nav ul li:nth-child(2) a{
 
 .news_info_open img{
     width: 300px;
-    border-radius: 2px;
+    border-radius: 3px;
     display: inline-block;
     margin: auto 15px auto 50px;
     flex-grow: 1;
@@ -222,13 +222,14 @@ header nav ul li:nth-child(2) a{
     .news_info_open div{
         width: auto;
         height: auto;
-        margin: 60px 20px auto 20px;
+        margin: 75px 25px auto 25px;
         overflow: auto;
     }
 
     .news_info_open div span{
         text-indent: 2em;
         font-size: 1.3em;
+        margin-top: 10px;
         margin-bottom: 15px;
     }
 

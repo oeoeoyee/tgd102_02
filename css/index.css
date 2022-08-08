@@ -171,8 +171,8 @@
     transition: all 1s;
 }
 
-.index_serve a:nth-child(n) img{
-    transition: all .5s;
+.index_serve img{
+    transition: all 1s;
 }
 
 .index_serve a:nth-child(n):hover{
@@ -299,7 +299,7 @@
 
 @media screen and (max-width: 1190px) {
     .index_works_out{
-        height: 580px;
+        height: 480px;
     }
 
     .index_works li:nth-of-type(odd){
@@ -427,6 +427,7 @@
 @media screen and (max-width: 1190px){
     .index_works1_open{
         flex-wrap: wrap;
+        height: 460px;
     }
 
     .index_works1_open_img{
@@ -438,9 +439,6 @@
     }
 
     .index_works1_open_img > a{
-        /* line-height: 260px;
-        width: 5%;
-        font-size: 20px; */
         display: none;
     }
 
@@ -451,7 +449,7 @@
     .index_works1_open span{
         width: 100%;
         padding: 20px 20px 30px;
-        height: 285px;
+        height: 150px;
     }
 
     .index_works1_open span > a{

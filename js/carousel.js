@@ -38,7 +38,7 @@ slide.addEventListener("mouseover", function(){
 slide.addEventListener("mouseout", function(){
     interval = setInterval(showNext, timer);
 });
-// /////////////////////////////////////////////設定選到誰
+// 設定選到誰
 var prevBtn = document.getElementsByClassName("js_prev")[0];
 var nextBtn = document.getElementsByClassName("js_next")[0];
 
@@ -59,7 +59,7 @@ document.addEventListener("click", function(e){
                 top: clicked_out_openY - 125,
                 behavior: 'smooth'
             });
-        }, 1000);
+        }, 700);
         e.target.style.webkitAnimationPlayState = "paused";
     }
     if(e.target.classList.contains("js_slideup")){
@@ -76,7 +76,7 @@ document.addEventListener("click", function(e){
                 top: clicked_out_openY - 125,
                 behavior: 'smooth'
             });
-        }, 1000);
+        }, 700);
         clicked_in.style.webkitAnimationPlayState = "running";
     }
 });
