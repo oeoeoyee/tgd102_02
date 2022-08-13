@@ -290,6 +290,8 @@
     padding: 1px 6px;
     user-select: none;
     cursor: pointer;
+    /* 預設清除input外觀 */
+    -webkit-appearance: none;
 }
 
 @media screen and (max-width: 1190px) {
@@ -391,6 +393,8 @@
     padding: 1px 6px;
     user-select: none;
     cursor: pointer;
+    /* 預設清除input外觀 */
+    -webkit-appearance: none;
 }
 
 @media screen and (max-width: 1190px) {

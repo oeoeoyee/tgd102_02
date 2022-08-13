@@ -382,8 +382,13 @@ header nav ul > li:nth-child(5) a{
 }
 
 /* --訂做須知-- */
-.order_main > p{
+.order_main ol{
     margin-left: 40px;
+    margin-bottom: 60px;
+}
+
+.order_main ol li{
+    line-height: 22px;
 }
 
 .order_main > p a{
@@ -429,6 +434,11 @@ header nav ul > li:nth-child(5) a{
 @media screen and (max-width: 1190px) {
     .order_main > p{
         margin-left: 0;
+    }
+
+    .order_main ol{
+        margin-left: 0;
+        margin-bottom: 0;
     }
     
     .order_detail{
