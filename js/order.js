@@ -73,35 +73,43 @@ for(let i = 0; i < choose_pic.length; i++){
                                 <a><i class="fa-regular fa-circle-xmark js_choose_result_del"></i></a>
                             </div>`
             choose_result.insertAdjacentHTML("beforeend", result_tag);
+
+            //移除花材
+            let result_del = document.getElementsByClassName("js_choose_result_del");
+            for(let i = 0; i < result_del.length; i++){
+                result_del[i].addEventListener("click", function(){
+                    this.closest("div").remove();
+                });
+            }
         }
     });
 }
 
 
 //移除花材
-const choose_result = document.getElementsByClassName("order_choose_result")[0];
-choose_result.addEventListener("click", function(e){
-    const result_del = document.getElementsByClassName("js_choose_result_del");
-    for(let i = 0; i < result_del.length; i++){
-        result_del[i].addEventListener("click", function(){
-            this.closest("div").remove();
-        });
-    }
+// const choose_result = document.getElementsByClassName("order_choose_result")[0];
+// choose_result.addEventListener("click", function(e){
+//     const result_del = document.getElementsByClassName("js_choose_result_del");
+//     for(let i = 0; i < result_del.length; i++){
+//         result_del[i].addEventListener("click", function(){
+//             this.closest("div").remove();
+//         });
+//     }
     
-    //result_del_word = 按鈕裡的字(哪種花)
-    // const result_del_word = e.target.closest("div").querySelector("p").innerText;
-    //result_tag_pic = 圖片區的花材名稱(陣列)
-    // const result_tag_pic = choose_result.previousElementSibling.querySelectorAll("p");
-    // for(let i = 0; i < result_tag_pic.length; i++){
-    //     if(result_tag_pic[i].innerText === result_del_word){
-    //         console.log(result_tag_pic[i].innerText);
+//     //result_del_word = 按鈕裡的字(哪種花)
+//     // const result_del_word = e.target.closest("div").querySelector("p").innerText;
+//     //result_tag_pic = 圖片區的花材名稱(陣列)
+//     // const result_tag_pic = choose_result.previousElementSibling.querySelectorAll("p");
+//     // for(let i = 0; i < result_tag_pic.length; i++){
+//     //     if(result_tag_pic[i].innerText === result_del_word){
+//     //         console.log(result_tag_pic[i].innerText);
             
-    //     }else{}
-    // }
+//     //     }else{}
+//     // }
 
-    // let pic_count = `<div>${count}</div>`;
-    // choose_pic.querySelector("span").insertAdjacentHTML("beforebegin", pic_count)
+//     // let pic_count = `<div>${count}</div>`;
+//     // choose_pic.querySelector("span").insertAdjacentHTML("beforebegin", pic_count)
         
-});//bug: 要多按一下才會動
+// });//bug: 要多按一下才會動
 
 
