@@ -1,7 +1,7 @@
 // =====================導覽列-漢堡線=========================//
 if(window.outerWidth < 1190){
     rwd_414();
-    header_414()
+    // header_414()
 }
 
 function rwd_414(){
@@ -53,8 +53,8 @@ window.addEventListener("scroll", function(){
 
 });
 
-function header_414(){
+// function header_414(){
     
-}
+// }
 
 // =====================hover效果轉為直接點選(手機)=========================//

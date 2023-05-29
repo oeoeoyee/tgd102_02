@@ -1,48 +1,80 @@
-// =====================作品集-輪播=========================//
-var counter = 0;
-var slide = document.getElementById("js_slide");
-var items = slide.querySelectorAll('img'); //抓所有的img
-var itemsCount = items.length;//總圖片數
-var timer = 4000;
-var interval = window.setInterval(showNext, timer);//循環設定
-var slide_dot = slide.getElementsByClassName('js_slide_dot');//下面三個圈圈
+   // =====================作品集-輪播=========================//
+let counter = 0;
+let timer = 4000;
+// var slide = document.getElementById("js_slide");
+// var items = slide.querySelectorAll('img'); //抓所有的img
+// var slide_dot = slide.getElementsByClassName('js_slide_dot');//下面三個圈圈
 
-var showCurrent = function(){
-    var itemToShow = Math.abs(counter % itemsCount); 
-    [].forEach.call( items, function(el){
-        el.classList.remove('js_show'); // 將所有 img 的 class="show" 移除
-    });
-    items[itemToShow].classList.add('js_show'); //將要顯示的img加上"show"的class
+document.addEventListener('mouseover', function(e){
+    console.log(e.target);
+    if(e.target.classList.contains('js_slidedown')){
+        let slide = e.target.parentElement.nextElementSibling;
+        console.log(slide);
+        // let slide = document.getElementsByClassName("index_works1_open")[0];
+        let items = slide.querySelectorAll('img'); //抓所有的img
+        let slide_dot = slide.getElementsByClassName('js_slide_dot');//下面三個圈圈
+        console.log(items);
+        console.log(slide_dot);
+        let itemsCount = items.length;//總圖片數
+        console.log(itemsCount);
+        let interval = window.setInterval(showNext, timer);//循環設定
 
-    [].forEach.call( slide_dot, function(el){
-        el.classList.remove('js_show'); // 將所有 img 的 class="show" 移除
-    });
-    slide_dot[itemToShow].classList.add('js_show'); //將要顯示的img加上"show"的class
-};
+        let showCurrent = function(){
+            let itemToShow = Math.abs(counter % itemsCount); 
+            [].forEach.call( items, function(el){
+                el.classList.remove('js_show'); // 將所有 img 的 class="show" 移除
+            });
+            items[itemToShow].classList.add('js_show'); //將要顯示的img加上"show"的class
+        
+            [].forEach.call( slide_dot, function(el){
+                el.classList.remove('js_show'); // 將所有 img 的 class="show" 移除
+            });
+            slide_dot[itemToShow].classList.add('js_show'); //將要顯示的img加上"show"的class
+        };
+        
+        function showNext(){
+            counter++;
+            showCurrent();
+        }
+        
+        function showPrev(){
+            counter--;
+            showCurrent();
+        }
 
-function showNext(){
-    counter++;
-    showCurrent();
-}
+        let prevBtn1 = document.getElementsByClassName("js_prev")[0];
+        let prevBtn2 = document.getElementsByClassName("js_prev")[1];
+        let prevBtn3 = document.getElementsByClassName("js_prev")[2];
+        let nextBtn1 = document.getElementsByClassName("js_next")[0];
+        let nextBtn2 = document.getElementsByClassName("js_next")[1];
+        let nextBtn3 = document.getElementsByClassName("js_next")[2];
 
-function showPrev(){
-    counter--;
-    showCurrent();
-}
-
-slide.addEventListener("mouseover", function(){
-    interval = clearInterval(interval);
+        prevBtn1.addEventListener('click', showPrev, false);
+        prevBtn2.addEventListener('click', showPrev, false);
+        prevBtn3.addEventListener('click', showPrev, false);
+        nextBtn1.addEventListener('click', showNext, false);
+        nextBtn2.addEventListener('click', showNext, false);
+        nextBtn3.addEventListener('click', showNext, false);
+    }
 });
 
-slide.addEventListener("mouseout", function(){
-    interval = setInterval(showNext, timer);
-});
+
+// 滑鼠懸停 秒數計算
+// slide.addEventListener("mouseover", function(){
+//     interval = clearInterval(interval);
+// });
+
+// slide.addEventListener("mouseout", function(){
+//     interval = setInterval(showNext, timer);
+// });
+
 // 設定選到誰
-var prevBtn = document.getElementsByClassName("js_prev")[0];
-var nextBtn = document.getElementsByClassName("js_next")[0];
+// 可以用 document.addEventListener('click', function(e){});
+// let prevBtn = document.getElementsByClassName("js_prev")[0];
+// let nextBtn = document.getElementsByClassName("js_next")[0];
 
-prevBtn.addEventListener('click', showPrev, false);
-nextBtn.addEventListener('click', showNext, false);
+// prevBtn.addEventListener('click', showPrev, false);
+// nextBtn.addEventListener('click', showNext, false);
 
 
 // =====================作品集-下滑區塊=========================//
